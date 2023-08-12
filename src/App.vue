@@ -1,18 +1,15 @@
 <script>
-import Home from '@/components/pages/Home.vue'
+import DisplayRecordsView from '@/components/pages/DisplayRecordsView.vue'
 
 export default {
   components: {
-    Home,
+    DisplayRecordsView: DisplayRecordsView,
   },
 }
 </script>
 
 <template>
-  <router-link to="/">Home</router-link> ・
-  <router-link to="/edit">Edit</router-link>
-  <h1>My ToDo App</h1>
-  <router-view />
+  <DisplayRecordsView />
 </template>
 
 <style>

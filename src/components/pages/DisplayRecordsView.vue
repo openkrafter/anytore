@@ -1,6 +1,6 @@
 <script>
-import TodoAdd from '@/components/components/TodoAdd.vue'
-import TodoList from '@/components/components/TodoList.vue'
+import TodoAdd from '@/components/containers/TodoAdd.vue'
+import TodoList from '@/components/containers/TodoList.vue'
 import { mapActions, mapStores } from 'pinia'
 import { useTodosStore } from '@/stores/todos'
 

@@ -1,10 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/components/pages/Home.vue'
-import Edit from '@/components/pages/Edit.vue'
+import AddTrainingRecordView from '@/components/pages/AddTrainingRecordView.vue'
+import DescribeRecordsView from '@/components/pages/DescribeRecordsView.vue'
+import DisplayRecordsView from '@/components/pages/DisplayRecordsView.vue'
+import UpdateTrainingItemView from '@/components/pages/UpdateTrainingItemView.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/edit', name: 'Edit', component: Edit },
+  {
+    path: '/display-records',
+    name: 'DisplayRecordsView',
+    component: DisplayRecordsView,
+  },
+  {
+    path: '/add-training-record',
+    name: 'AddTrainingRecordView',
+    component: AddTrainingRecordView,
+  },
+  {
+    path: '/update-training-item',
+    name: 'UpdateTrainingItemView',
+    component: UpdateTrainingItemView,
+  },
+  {
+    path: '/describe-records',
+    name: 'DescribeRecordsView',
+    component: DescribeRecordsView,
+  },
 ]
 
 const router = createRouter({
