@@ -1,15 +1,23 @@
-<script>
-import DisplayRecordsView from '@/components/pages/DisplayRecordsView.vue'
+<script lang="js">
+import { reactive, defineComponent, onMounted } from 'vue'
 
-export default {
-  components: {
-    DisplayRecordsView: DisplayRecordsView,
+export default defineComponent({
+  name: 'App',
+  setup() {
+    const hello = reactive({ message: '' })
+
+    onMounted(async () => {
+      const res = await fetch('/training-items')
+      hello.message = await res.json()
+    })
+
+    return { hello }
   },
-}
+})
 </script>
 
 <template>
-  <DisplayRecordsView />
+  <!--<router-view />  -->
 </template>
 
 <style>

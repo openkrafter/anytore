@@ -6,6 +6,10 @@ import UpdateTrainingItemView from '@/components/pages/UpdateTrainingItemView.vu
 
 const routes = [
   {
+    path: '/',
+    redirect: { name: 'DisplayRecordsView' },
+  },
+  {
     path: '/display-records',
     name: 'DisplayRecordsView',
     component: DisplayRecordsView,

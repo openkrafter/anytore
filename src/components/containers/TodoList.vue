@@ -12,7 +12,7 @@ export default {
 
   methods: {
     openEditMode(todo) {
-      this.$router.push('/edit')
+      this.$router.push('/update-training-item')
     },
   },
 }
