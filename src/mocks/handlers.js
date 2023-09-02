@@ -9,13 +9,13 @@ export const handlers = [
           name: 'ランニング',
           type: 'aerobic', // aerobic, anaerobic
           unit: 'hour', // minute, hour, count, distance
-          kcal: '150',
+          kcal: 150,
         },
         {
           name: 'プール',
           type: 'aerobic', // aerobic, anaerobic
           unit: 'minute', // minute, hour, count, distance
-          kcal: '5',
+          kcal: 5,
         }
       )
     )
