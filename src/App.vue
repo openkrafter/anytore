@@ -3,21 +3,66 @@ import { reactive, defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   name: 'App',
+
   setup() {
-    const hello = reactive({ message: '' })
-    console.log("testsssss")
+    console.log("start App")
 
-    onMounted(async () => {
-      const res = await fetch('/training-items')
-      hello.message = await res.json()
+    // mock test
+    testGetApi('/training-items')
+    testGetApi('/training-items/2')
+    testPostApi('/training-items', { id: 3, name: 'posttest' })
+    testPutApi('/training-items/4', { id: 4, name: 'puttest' })
+    testDeleteApi('/training-items/5')
 
-      const res2 = await fetch('/training-items/2')
-      // hello.message = await res2.json()
-    })
-
-    return { hello }
+    return { }
   },
 })
+
+function testGetApi(path) {
+  onMounted(async () => {
+    const response = reactive({ message: '' })
+    const res = await fetch(path)
+    response.message = await res.json()
+  })
+}
+
+function testPostApi(path, data) {
+  onMounted(async () => {
+    const response = reactive({ message: '' })
+    const res = await fetch(path, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    })
+    response.message = await res.json()
+  })
+}
+
+function testPutApi(path, data) {
+  onMounted(async () => {
+    const response = reactive({ message: '' })
+    const res = await fetch(path, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    })
+    response.message = await res.json()
+  })
+}
+
+function testDeleteApi(path) {
+  onMounted(async () => {
+    const response = reactive({ message: '' })
+    const res = await fetch(path, {
+      method: 'DELETE',
+    })
+    response.message = await res.json()
+  })
+}
 </script>
 
 <template>

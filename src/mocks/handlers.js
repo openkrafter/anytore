@@ -1,23 +1,17 @@
 import { rest } from 'msw'
+import mockTrainingItems from './resolvers/training-items'
 
 export const handlers = [
-  rest.get('/training-items', (_req, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json(
-        {
-          name: 'ランニング',
-          type: 'aerobic', // aerobic, anaerobic
-          unit: 'hour', // minute, hour, count, distance
-          kcal: 150,
-        },
-        {
-          name: 'プール',
-          type: 'aerobic', // aerobic, anaerobic
-          unit: 'minute', // minute, hour, count, distance
-          kcal: 5,
-        }
-      )
-    )
-  }),
+  // TrainingItem API
+  rest.get('/training-items', mockTrainingItems.listTraningItem),
+  rest.post('/training-items', mockTrainingItems.createTraningItem),
+  rest.get('/training-items/:trainingItemId', mockTrainingItems.getTraningItem),
+  rest.put(
+    '/training-items/:trainingItemId',
+    mockTrainingItems.updateTraningItem
+  ),
+  rest.delete(
+    '/training-items/:trainingItemId',
+    mockTrainingItems.deleteTraningItem
+  ),
 ]
