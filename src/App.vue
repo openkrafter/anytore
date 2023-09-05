@@ -20,53 +20,49 @@ export default defineComponent({
 
 function testGetApi(path) {
   onMounted(async () => {
-    const response = reactive({ message: '' })
-    const res = await fetch(path)
-    response.message = await res.json()
+    const response = await fetch(path)
+    const results = await response.json()
   })
 }
 
 function testPostApi(path, data) {
   onMounted(async () => {
-    const response = reactive({ message: '' })
-    const res = await fetch(path, {
+    const response = await fetch(path, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data),
     })
-    response.message = await res.json()
+    const results = await response.json()
   })
 }
 
 function testPutApi(path, data) {
   onMounted(async () => {
-    const response = reactive({ message: '' })
-    const res = await fetch(path, {
+    const response = await fetch(path, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data),
     })
-    response.message = await res.json()
+    const results = await response.json()
   })
 }
 
 function testDeleteApi(path) {
   onMounted(async () => {
-    const response = reactive({ message: '' })
-    const res = await fetch(path, {
+    const response = await fetch(path, {
       method: 'DELETE',
     })
-    response.message = await res.json()
+    const results = await response.json()
   })
 }
 </script>
 
 <template>
-  <!--<router-view />  -->
+  <router-view />
 </template>
 
 <style>

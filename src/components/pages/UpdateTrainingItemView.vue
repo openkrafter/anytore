@@ -11,7 +11,4 @@ export default {
 <template>
   <p>あなたのトレーニング</p>
   <DescribeTrainingItems />
-
-  <p>編集モード</p>
-  <input type="text" name="" id="" />
 </template>
