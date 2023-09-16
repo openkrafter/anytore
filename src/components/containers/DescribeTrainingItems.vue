@@ -1,5 +1,10 @@
+<style src="./DescribeTrainingItems.css" scoped></style>
+
 <script>
-import getTrainingItems from '@/components/api/TrainingItem.vue'
+import { useUserStore } from '@/stores/user'
+import { mapStores } from 'pinia'
+import { mapActions } from 'pinia'
+// import listTrainingItems from '@/components/api/TrainingItem.vue'
 import Button1 from '@/components/basics/Button1.vue'
 
 export default {
@@ -13,7 +18,13 @@ export default {
     }
   },
 
+  computed: {
+    ...mapStores(useUserStore),
+  },
+
   methods: {
+    ...mapActions(useUserStore, ['setUser']),
+
     testClick() {
       console.log('click!')
     },
@@ -25,7 +36,9 @@ export default {
     const trainingItemsResults = await response.json()
     this.trainingItems.push(...trainingItemsResults)
     console.log(this.trainingItems)
-    // await getTrainingItems()
+    console.log('aaa')
+    console.log(this.userStore.user)
+    // this.trainingItems = await listTrainingItems()
   },
 }
 </script>
@@ -43,11 +56,3 @@ export default {
     </li>
   </ul>
 </template>
-
-<style>
-.training-item {
-  background-color: #008;
-  margin-left: 0.5em;
-  border-radius: 0.5em;
-}
-</style>

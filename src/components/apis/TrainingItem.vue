@@ -1,7 +1,7 @@
 <script>
-import TrainingItem from '@/components/models/TrainingItem.vue'
+import { TrainingItem } from '@/components/models/TrainingItem.vue'
 
-export async function getTrainingItems() {
+export async function listTrainingItems() {
   const path = '/training-items'
   const response = await fetch(path)
   const trainingItemsResults = await response.json()
