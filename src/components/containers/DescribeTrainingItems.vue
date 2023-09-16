@@ -1,4 +1,5 @@
 <script>
+import getTrainingItems from '@/components/api/TrainingItem.vue'
 import Button1 from '@/components/basics/Button1.vue'
 
 export default {
@@ -24,6 +25,7 @@ export default {
     const trainingItemsResults = await response.json()
     this.trainingItems.push(...trainingItemsResults)
     console.log(this.trainingItems)
+    // await getTrainingItems()
   },
 }
 </script>

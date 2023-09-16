@@ -6,6 +6,7 @@ const listTraningItem = (req, res, ctx) => {
     ctx.json([
       {
         id: 1,
+        user_id: 1,
         name: 'ランニング',
         type: 'aerobic', // aerobic, anaerobic
         unit: 'hour', // minute, hour, count, distance
@@ -13,6 +14,7 @@ const listTraningItem = (req, res, ctx) => {
       },
       {
         id: 2,
+        user_id: 1,
         name: 'プール',
         type: 'aerobic', // aerobic, anaerobic
         unit: 'minute', // minute, hour, count, distance
@@ -32,6 +34,7 @@ const getTraningItem = (req, res, ctx) => {
     ctx.status(200),
     ctx.json({
       id: req.params.trainingItemId,
+      user_id: 1,
       name: 'プール',
       type: 'aerobic', // aerobic, anaerobic
       unit: 'minute', // minute, hour, count, distance
