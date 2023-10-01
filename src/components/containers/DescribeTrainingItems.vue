@@ -1,17 +1,7 @@
-<style src="./DescribeTrainingItems.css" scoped></style>
-
 <script>
-import { useUserStore } from '@/stores/user'
-import { mapStores } from 'pinia'
-import { mapActions } from 'pinia'
-// import listTrainingItems from '@/components/api/TrainingItem.vue'
-import Button1 from '@/components/basics/Button1.vue'
+import getTrainingItems from '@/components/apis/TrainingItem.vue'
 
 export default {
-  components: {
-    Button1,
-  },
-
   data() {
     return {
       trainingItems: [],
@@ -19,14 +9,28 @@ export default {
   },
 
   computed: {
-    ...mapStores(useUserStore),
-  },
+    trainingItemTypeName() {
+      return this.trainingItems.map((trainingItem) => {
+        if (trainingItem.type == 'aerobic') {
+          return '有酸素'
+        } else if (trainingItem.type == 'anaerobic') {
+          return '無酸素'
+        }
+      })
+    },
 
-  methods: {
-    ...mapActions(useUserStore, ['setUser']),
-
-    testClick() {
-      console.log('click!')
+    trainingItemUnitName() {
+      return this.trainingItems.map((trainingItem) => {
+        if (trainingItem.unit == 'hour') {
+          return '時間 (h)'
+        } else if (trainingItem.unit == 'minute') {
+          return '時間 (min)'
+        } else if (trainingItem.unit == 'count') {
+          return '回数'
+        } else if (trainingItem.unit == 'distance') {
+          return '距離'
+        }
+      })
     },
   },
 
@@ -36,23 +40,32 @@ export default {
     const trainingItemsResults = await response.json()
     this.trainingItems.push(...trainingItemsResults)
     console.log(this.trainingItems)
-    console.log('aaa')
-    console.log(this.userStore.user)
-    // this.trainingItems = await listTrainingItems()
+    // await getTrainingItems()
   },
 }
 </script>
 
 <template>
-  <Button1 @click="testClick"> 追加 </Button1>
-  <p>登録済みトレーニング項目</p>
-  <ul>
-    <li class="training-item" v-for="trainingItem in trainingItems">
-      <h3>{{ trainingItem.name }}</h3>
-      <p>
-        {{ trainingItem.type }} {{ trainingItem.unit }}
-        {{ trainingItem.kcal }}
-      </p>
-    </li>
-  </ul>
+  <h2 class="text-2xl">登録済みトレーニング項目</h2>
+
+  <div class="grid grid-cols-10 gap-4 mt-4">
+    <div
+      class="training-item col-span-5 m-2 p-4 space-y-2 rounded-xl bg-white"
+      v-for="(trainingItem, idx) in trainingItems"
+    >
+      <h3 class="text-xl font-bold">{{ trainingItem.name }}</h3>
+      <div class="ml-2">
+        運動タイプ:
+        <span class="font-semibold">{{ trainingItemTypeName[idx] }}</span>
+      </div>
+      <div class="ml-2">
+        運動単位:
+        <span class="font-semibold">{{ trainingItemUnitName[idx] }}</span>
+      </div>
+      <div class="ml-2">
+        単位当たりの消費カロリー:
+        <span class="font-semibold">{{ trainingItem.kcal }}</span>
+      </div>
+    </div>
+  </div>
 </template>
