@@ -20,6 +20,14 @@ const listTraningItem = (req, res, ctx) => {
         unit: 'minute', // minute, hour, count, distance
         kcal: 5,
       },
+      {
+        id: 3,
+        user_id: 1,
+        name: 'ウォーキング',
+        type: 'aerobic', // aerobic, anaerobic
+        unit: 'minute', // minute, hour, count, distance
+        kcal: 2,
+      },
     ])
   )
 }
