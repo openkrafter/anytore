@@ -9,13 +9,21 @@ export async function listTrainingItems() {
 
   var trainingItems = []
   trainingItemsResults.forEach((trainingItemResult) => {
-    var trainingItem = new TrainingItem()
-    trainingItem.id = trainingItemResult.id
-    trainingItem.userId = trainingItemResult.userId
-    trainingItem.name = trainingItemResult.name
-    trainingItem.type = trainingItemResult.type
-    trainingItem.unit = trainingItemResult.unit
-    trainingItem.kcal = trainingItemResult.kcal
+    var trainingItem = new TrainingItem(
+      trainingItemResult.id,
+      trainingItemResult.userId,
+      trainingItemResult.name,
+      trainingItemResult.type,
+      trainingItemResult.unit,
+      trainingItemResult.kcal
+    )
+
+    // trainingItem.id = trainingItemResult.id
+    // trainingItem.userId = trainingItemResult.userId
+    // trainingItem.name = trainingItemResult.name
+    // trainingItem.type = trainingItemResult.type
+    // trainingItem.unit = trainingItemResult.unit
+    // trainingItem.kcal = trainingItemResult.kcal
 
     trainingItems.push(trainingItem)
     // console.log(trainingItem)

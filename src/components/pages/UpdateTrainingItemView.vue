@@ -1,13 +1,13 @@
 <script>
 import UpdateTrainingItem from '@/components/containers/UpdateTrainingItem.vue'
 import DescribeTrainingItems from '@/components/containers/DescribeTrainingItems.vue'
-import AddButton from '@/components/basics/AddButton.vue'
+import LightBlueButton from '@/components/basics/LightBlueButton.vue'
 
 export default {
   components: {
     UpdateTrainingItem,
     DescribeTrainingItems,
-    AddButton,
+    LightBlueButton,
   },
 
   data() {
@@ -26,21 +26,6 @@ export default {
       //   kcal: 0,
       // })
     },
-
-    saveTrainingItem() {
-      console.log('save training!')
-      console.log(this.trainingItem)
-    },
-
-    deleteTrainingItem() {
-      console.log('delete training!')
-      console.log(this.trainingItem)
-    },
-
-    closeTrainingItemModal() {
-      console.log('close modal')
-      this.trainingItem = {}
-    },
   },
 }
 </script>
@@ -49,13 +34,13 @@ export default {
   <div class="m-4">
     <div class="flex justify-between">
       <h1 class="text-4xl">あなたのトレーニング</h1>
-      <AddButton
+      <LightBlueButton
         data-modal-target="add-training-item-modal"
         data-modal-toggle="add-training-item-modal"
         @click="addTrainingItem"
       >
         追加
-      </AddButton>
+      </LightBlueButton>
 
       <!-- Main modal -->
       <div
@@ -75,7 +60,9 @@ export default {
 
 <style>
 body {
+  /*
   background-color: #eee;
+*/
 }
 
 .training-item {
