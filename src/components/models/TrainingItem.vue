@@ -1,6 +1,6 @@
 <script>
 export class TrainingItem {
-  constructor(id, userId, name = '', type = '', unit = '', kcal) {
+  constructor(id = 0, userId = 0, name = '', type = '', unit = '', kcal = 0) {
     this.id = id
     this.userId = userId
     this.name = name
