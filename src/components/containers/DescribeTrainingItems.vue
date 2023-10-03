@@ -1,5 +1,6 @@
 <script>
-import getTrainingItems from '@/components/apis/TrainingItem.vue'
+import '@/components/containers/DescribeTrainingItems.css'
+import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
 
 export default {
   data() {
@@ -35,12 +36,7 @@ export default {
   },
 
   async created() {
-    const path = '/training-items'
-    const response = await fetch(path)
-    const trainingItemsResults = await response.json()
-    this.trainingItems.push(...trainingItemsResults)
-    console.log(this.trainingItems)
-    // await getTrainingItems()
+    this.trainingItems = await listTrainingItems()
   },
 }
 </script>
