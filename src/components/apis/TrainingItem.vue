@@ -6,6 +6,7 @@ export async function listTrainingItems() {
   const response = await fetch(path)
   const trainingItemsResults = await response.json()
   console.log('listTrainingItems')
+  // TODO validation
 
   var trainingItems = []
   trainingItemsResults.forEach((trainingItemResult) => {
@@ -18,28 +19,65 @@ export async function listTrainingItems() {
       trainingItemResult.kcal
     )
 
-    // trainingItem.id = trainingItemResult.id
-    // trainingItem.userId = trainingItemResult.userId
-    // trainingItem.name = trainingItemResult.name
-    // trainingItem.type = trainingItemResult.type
-    // trainingItem.unit = trainingItemResult.unit
-    // trainingItem.kcal = trainingItemResult.kcal
-
     trainingItems.push(trainingItem)
     // console.log(trainingItem)
-
-    // trainingItems.push(
-    //   new TrainingItem(
-    //     (id = trainingItem.id),
-    //     (userId = trainingItem.userId),
-    //     (name = trainingItem.name),
-    //     (type = trainingItem.type),
-    //     (unit = trainingItem.unit),
-    //     (kcal = trainingItem.kcal)
-    //   )
-    // )
   })
   console.log(trainingItems)
   return trainingItems
+}
+
+export async function createTrainingItem(trainingItem) {
+  // TODO validation
+
+  console.log('createTrainingItem')
+  console.log(trainingItem)
+  const path = '/training-items'
+
+  const data = {
+    userId: trainingItem.userId,
+    name: trainingItem.name,
+    type: trainingItem.type,
+    unit: trainingItem.unit,
+    kcal: trainingItem.kcal,
+  }
+
+  const response = await fetch(path, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  const results = await response.json()
+
+  console.log(results)
+}
+
+export async function updateTrainingItem(trainingItem) {
+  // TODO validation
+
+  console.log('updateTrainingItem')
+  console.log(trainingItem)
+  const path = '/training-items'
+
+  const data = {
+    id: trainingItem.id,
+    userId: trainingItem.userId,
+    name: trainingItem.name,
+    type: trainingItem.type,
+    unit: trainingItem.unit,
+    kcal: trainingItem.kcal,
+  }
+
+  const response = await fetch(path, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  const results = await response.json()
+
+  console.log(results)
 }
 </script>

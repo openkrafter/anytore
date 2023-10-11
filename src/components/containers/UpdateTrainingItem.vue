@@ -1,8 +1,14 @@
 <script>
+import {
+  createTrainingItem,
+  updateTrainingItem,
+} from '@/components/apis/TrainingItem.vue'
+import { TrainingItem } from '@/components/models/TrainingItem.vue'
+
 export default {
   data() {
     return {
-      trainingItem: {},
+      trainingItemInput: {},
     }
   },
 
@@ -14,17 +20,33 @@ export default {
   methods: {
     saveTrainingItem() {
       console.log('save training!')
-      console.log(this.trainingItem)
+      console.log(this.trainingItemInput)
+
+      var trainingItem = new TrainingItem(
+        null,
+        this.trainingItemInput.userId,
+        this.trainingItemInput.name,
+        this.trainingItemInput.type,
+        this.trainingItemInput.unit,
+        this.trainingItemInput.kcal
+      )
+
+      if (this.trainingItemInput.id == null) {
+        createTrainingItem(trainingItem)
+      } else {
+        trainingItem.id = this.trainingItemInput.id
+        updateTrainingItem(trainingItem)
+      }
     },
 
     deleteTrainingItem() {
       console.log('delete training!')
-      console.log(this.trainingItem)
+      console.log(this.trainingItemInput)
     },
 
     closeTrainingItemModal() {
       console.log('close modal')
-      this.trainingItem = {}
+      this.trainingItemInput = {}
     },
   },
 }
@@ -73,7 +95,7 @@ export default {
               type="text"
               name="name"
               id="name"
-              v-model="trainingItem.name"
+              v-model="trainingItemInput.name"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="例: ランニング"
               required
