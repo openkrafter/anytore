@@ -4,6 +4,8 @@ import {
   updateTrainingItem,
 } from '@/components/apis/TrainingItem.vue'
 import { TrainingItem } from '@/components/models/TrainingItem.vue'
+import { mapStores } from 'pinia'
+import { useUserStore } from '@/stores/user'
 
 export default {
   data() {
@@ -13,6 +15,7 @@ export default {
   },
 
   computed: {
+    ...mapStores(useUserStore),
     trainingItemTypeName() {
       return 'a'
     },
@@ -22,9 +25,13 @@ export default {
       console.log('save training!')
       console.log(this.trainingItemInput)
 
+      console.log('user store')
+      console.log(this.userStore.user.id)
+      console.log(this.userStore.user.name)
+
       var trainingItem = new TrainingItem(
         null,
-        this.trainingItemInput.userId,
+        this.userStore.user.id,
         this.trainingItemInput.name,
         this.trainingItemInput.type,
         this.trainingItemInput.unit,
@@ -98,6 +105,23 @@ export default {
               v-model="trainingItemInput.name"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               placeholder="例: ランニング"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              for="kcal"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >単位あたりの消費カロリー (kcal)</label
+            >
+            <input
+              type="text"
+              name="kcal"
+              id="kcal"
+              v-model="trainingItemInput.kcal"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="150"
               required
             />
           </div>
