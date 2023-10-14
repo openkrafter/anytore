@@ -13,9 +13,9 @@ export default {
     trainingItemTypeName() {
       return this.trainingItems.map((trainingItem) => {
         if (trainingItem.type == 'aerobic') {
-          return '有酸素'
+          return '有酸素運動'
         } else if (trainingItem.type == 'anaerobic') {
-          return '無酸素'
+          return '無酸素運動'
         }
       })
     },

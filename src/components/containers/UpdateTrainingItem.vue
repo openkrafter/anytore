@@ -111,17 +111,60 @@ export default {
 
           <div>
             <label
+              for="type"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >トレーニングのタイプ</label
+            >
+
+            <select
+              name="type"
+              id="type"
+              v-model="trainingItemInput.type"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              required
+            >
+              <option value="" selected hidden>-- 選択 --</option>
+              <option value="aerobic">有酸素運動</option>
+              <option value="anaerobic">無酸素運動</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="unit"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >記録単位</label
+            >
+
+            <select
+              name="unit"
+              id="unit"
+              v-model="trainingItemInput.unit"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="例: 時間 (h)"
+              required
+            >
+              <option value="" selected hidden>-- 選択 --</option>
+              <option value="minute">時間 (min)</option>
+              <option value="hour">時間 (h)</option>
+              <option value="count">回数</option>
+              <option value="distance">距離 (km)</option>
+            </select>
+          </div>
+
+          <div>
+            <label
               for="kcal"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >単位あたりの消費カロリー (kcal)</label
             >
             <input
-              type="text"
+              type="number"
               name="kcal"
               id="kcal"
               v-model="trainingItemInput.kcal"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-              placeholder="150"
+              placeholder="例: 150"
               required
             />
           </div>
