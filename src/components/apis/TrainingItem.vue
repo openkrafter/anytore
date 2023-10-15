@@ -1,11 +1,13 @@
 <script>
 import { TrainingItem } from '@/components/models/TrainingItem.vue'
+import logger from '@/logger'
+import { requestApi } from '@/components/apis/RequestApi.vue'
 
 export async function listTrainingItems() {
   const path = '/training-items'
   const response = await fetch(path)
   const trainingItemsResults = await response.json()
-  console.log('listTrainingItems')
+  logger.trace('listTrainingItems')
   // TODO validation
 
   var trainingItems = []
@@ -20,20 +22,45 @@ export async function listTrainingItems() {
     )
 
     trainingItems.push(trainingItem)
-    // console.log(trainingItem)
+    // logger.trace(trainingItem)
   })
-  console.log(trainingItems)
+  logger.trace(trainingItems)
   return trainingItems
 }
 
 export async function createTrainingItem(trainingItem) {
-  // TODO validation
+  logger.trace(trainingItem)
 
-  console.log('createTrainingItem')
-  console.log(trainingItem)
-  const path = '/training-items'
+  // null check
+  if (
+    trainingItem.userId == null || // null or undefiend
+    trainingItem.userId == '' ||
+    trainingItem.name == null ||
+    trainingItem.name == '' ||
+    trainingItem.type == null ||
+    trainingItem.type == '' ||
+    trainingItem.unit == null ||
+    trainingItem.unit == '' ||
+    trainingItem.kcal == null ||
+    trainingItem.kcal == ''
+  ) {
+    logger.error('Error: Invalid value of trainingItem.')
+  }
 
-  const data = {
+  // type check
+  if (
+    typeof trainingItem.userId !== 'number' ||
+    typeof trainingItem.name !== 'string' ||
+    typeof trainingItem.type !== 'string' ||
+    typeof trainingItem.unit !== 'string' ||
+    typeof trainingItem.kcal !== 'number'
+  ) {
+    logger.error('Error: Invalid type of trainingItem.')
+  }
+
+  const path = '/training-itemsbbb'
+
+  const requestBody = {
     userId: trainingItem.userId,
     name: trainingItem.name,
     type: trainingItem.type,
@@ -41,23 +68,25 @@ export async function createTrainingItem(trainingItem) {
     kcal: trainingItem.kcal,
   }
 
-  const response = await fetch(path, {
+  const requestData = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
-  })
-  const results = await response.json()
-
-  console.log(results)
+    body: JSON.stringify(requestBody),
+  }
+  try {
+    const results = await requestApi(path, requestData)
+  } catch {
+    logger.error('Error: API request failed.')
+  }
 }
 
 export async function updateTrainingItem(trainingItem) {
   // TODO validation
 
-  console.log('updateTrainingItem')
-  console.log(trainingItem)
+  logger.trace('updateTrainingItem')
+  logger.trace(trainingItem)
   const path = '/training-items'
 
   const data = {
@@ -78,6 +107,6 @@ export async function updateTrainingItem(trainingItem) {
   })
   const results = await response.json()
 
-  console.log(results)
+  logger.trace(results)
 }
 </script>
