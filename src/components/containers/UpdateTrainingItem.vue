@@ -1,4 +1,5 @@
 <script>
+import logger from '@/logger'
 import {
   createTrainingItem,
   updateTrainingItem,

@@ -10,11 +10,12 @@ export async function requestApi(path, requestData) {
       response = await fetch(path, requestData)
     }
     if (!response.ok) {
-      throw new Error('Bad fetch response', response)
+      throw new Error('Error: Bad fetch response', response)
     }
   } catch (error) {
     logger.error(error)
-    throw error
+    logger.error('Error: API request failed.')
+    // throw error
   }
 
   return await response.json()

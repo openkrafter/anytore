@@ -1,7 +1,7 @@
 <script>
 import { TrainingItem } from '@/components/models/TrainingItem.vue'
 import logger from '@/logger'
-import { requestApi } from '@/components/apis/RequestApi.vue'
+import { requestApi } from '@/components/apis/CommonMethods.vue'
 
 export async function listTrainingItems() {
   const path = '/training-items'
@@ -58,7 +58,7 @@ export async function createTrainingItem(trainingItem) {
     logger.error('Error: Invalid type of trainingItem.')
   }
 
-  const path = '/training-itemsbbb'
+  const path = '/training-items'
 
   const requestBody = {
     userId: trainingItem.userId,
@@ -75,11 +75,12 @@ export async function createTrainingItem(trainingItem) {
     },
     body: JSON.stringify(requestBody),
   }
-  try {
-    const results = await requestApi(path, requestData)
-  } catch {
-    logger.error('Error: API request failed.')
-  }
+  const results = await requestApi(path, requestData)
+  // try {
+  //   const results = await requestApi(path, requestData)
+  // } catch {
+  //   logger.error('Error: API request failed.')
+  // }
 }
 
 export async function updateTrainingItem(trainingItem) {
