@@ -16,18 +16,15 @@ export default {
 
   computed: {
     ...mapStores(useUserStore),
-    trainingItemTypeName() {
-      return 'a'
-    },
   },
   methods: {
     saveTrainingItem() {
-      console.log('save training!')
-      console.log(this.trainingItemInput)
+      logger.trace('save training!')
+      logger.trace(this.trainingItemInput)
 
-      console.log('user store')
-      console.log(this.userStore.user.id)
-      console.log(this.userStore.user.name)
+      logger.trace('user store')
+      logger.trace(this.userStore.user.id)
+      logger.trace(this.userStore.user.name)
 
       var trainingItem = new TrainingItem(
         null,
@@ -47,12 +44,12 @@ export default {
     },
 
     deleteTrainingItem() {
-      console.log('delete training!')
-      console.log(this.trainingItemInput)
+      logger.trace('delete training!')
+      logger.trace(this.trainingItemInput)
     },
 
     closeTrainingItemModal() {
-      console.log('close modal')
+      logger.trace('close modal')
       this.trainingItemInput = {}
     },
   },
