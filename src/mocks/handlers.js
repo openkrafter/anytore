@@ -1,5 +1,6 @@
 import { rest } from 'msw'
 import mockTrainingItems from './resolvers/training-items'
+import mockTrainingRecords from './resolvers/training-records'
 
 export const handlers = [
   // for msw GET /vite.svg
@@ -18,5 +19,21 @@ export const handlers = [
   rest.delete(
     '/training-items/:trainingItemId',
     mockTrainingItems.deleteTraningItem
+  ),
+
+  // TrainingRecord API
+  rest.get('/training-records', mockTrainingRecords.listTraningRecord),
+  rest.post('/training-records', mockTrainingRecords.createTraningRecord),
+  rest.get(
+    '/training-records/:trainingRecordId',
+    mockTrainingRecords.getTraningRecord
+  ),
+  rest.put(
+    '/training-records/:trainingRecordId',
+    mockTrainingRecords.updateTraningRecord
+  ),
+  rest.delete(
+    '/training-records/:trainingRecordId',
+    mockTrainingRecords.deleteTraningRecord
   ),
 ]
