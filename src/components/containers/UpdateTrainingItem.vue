@@ -47,6 +47,7 @@ export default {
     deleteTrainingItem() {
       logger.trace('delete training!')
       logger.trace(this.trainingItemInput)
+      deleteTrainingItem(this.trainingItemInput.id)
     },
 
     closeTrainingItemModal() {
