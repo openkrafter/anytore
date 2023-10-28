@@ -2,6 +2,7 @@
 import UpdateTrainingItem from '@/components/containers/UpdateTrainingItem.vue'
 import DescribeTrainingItems from '@/components/containers/DescribeTrainingItems.vue'
 import LightBlueButton from '@/components/basics/LightBlueButton.vue'
+import logger from '@/logger'
 
 export default {
   components: {
@@ -18,13 +19,7 @@ export default {
 
   methods: {
     addTrainingItem() {
-      console.log('add training!')
-      // this.trainingItem.push({
-      //   name: '',
-      //   type: '',
-      //   unit: '',
-      //   kcal: 0,
-      // })
+      logger.trace('add training!')
     },
   },
 }

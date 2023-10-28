@@ -5,13 +5,40 @@ import { requestApi } from '@/components/apis/CommonMethods.vue'
 
 export async function listTrainingItems() {
   const path = '/training-items'
-  const response = await fetch(path)
-  const trainingItemsResults = await response.json()
-  logger.trace('listTrainingItems')
-  // TODO validation
+  const trainingItemsResults = await requestApi(path)
 
   var trainingItems = []
   trainingItemsResults.forEach((trainingItemResult) => {
+    // null check
+    if (
+      trainingItemResult.id == null ||
+      trainingItemResult.id == '' ||
+      trainingItemResult.user_id == null ||
+      trainingItemResult.user_id == '' ||
+      trainingItemResult.name == null ||
+      trainingItemResult.name == '' ||
+      trainingItemResult.type == null ||
+      trainingItemResult.type == '' ||
+      trainingItemResult.unit == null ||
+      trainingItemResult.unit == '' ||
+      trainingItemResult.kcal == null ||
+      trainingItemResult.kcal == ''
+    ) {
+      logger.error('Error: Invalid value of trainingItem.')
+    }
+
+    // type check
+    if (
+      typeof trainingItemResult.id !== 'number' ||
+      typeof trainingItemResult.user_id !== 'number' ||
+      typeof trainingItemResult.name !== 'string' ||
+      typeof trainingItemResult.type !== 'string' ||
+      typeof trainingItemResult.unit !== 'string' ||
+      typeof trainingItemResult.kcal !== 'number'
+    ) {
+      logger.error('Error: Invalid type of trainingItem.')
+    }
+
     var trainingItem = new TrainingItem(
       trainingItemResult.id,
       trainingItemResult.userId,
@@ -22,19 +49,18 @@ export async function listTrainingItems() {
     )
 
     trainingItems.push(trainingItem)
-    // logger.trace(trainingItem)
   })
-  logger.trace(trainingItems)
   return trainingItems
 }
 
 export async function createTrainingItem(trainingItem) {
+  logger.trace('createTrainingItem')
   logger.trace(trainingItem)
 
   // null check
   if (
     trainingItem.userId == null || // null or undefiend
-    trainingItem.userId == '' ||
+    trainingItem.userId == '' || // "" or 0
     trainingItem.name == null ||
     trainingItem.name == '' ||
     trainingItem.type == null ||
@@ -76,21 +102,45 @@ export async function createTrainingItem(trainingItem) {
     body: JSON.stringify(requestBody),
   }
   const results = await requestApi(path, requestData)
-  // try {
-  //   const results = await requestApi(path, requestData)
-  // } catch {
-  //   logger.error('Error: API request failed.')
-  // }
 }
 
 export async function updateTrainingItem(trainingItem) {
-  // TODO validation
-
   logger.trace('updateTrainingItem')
   logger.trace(trainingItem)
-  const path = '/training-items'
 
-  const data = {
+  // null check
+  if (
+    trainingItem.id == null ||
+    trainingItem.id == '' ||
+    trainingItem.userId == null || // null or undefiend
+    trainingItem.userId == '' || // "" or 0
+    trainingItem.name == null ||
+    trainingItem.name == '' ||
+    trainingItem.type == null ||
+    trainingItem.type == '' ||
+    trainingItem.unit == null ||
+    trainingItem.unit == '' ||
+    trainingItem.kcal == null ||
+    trainingItem.kcal == ''
+  ) {
+    logger.error('Error: Invalid value of trainingItem.')
+  }
+
+  // type check
+  if (
+    typeof trainingItem.id !== 'number' ||
+    typeof trainingItem.userId !== 'number' ||
+    typeof trainingItem.name !== 'string' ||
+    typeof trainingItem.type !== 'string' ||
+    typeof trainingItem.unit !== 'string' ||
+    typeof trainingItem.kcal !== 'number'
+  ) {
+    logger.error('Error: Invalid type of trainingItem.')
+  }
+
+  const path = '/training-items/' + trainingItem.id
+
+  const requestBody = {
     id: trainingItem.id,
     userId: trainingItem.userId,
     name: trainingItem.name,
@@ -99,15 +149,45 @@ export async function updateTrainingItem(trainingItem) {
     kcal: trainingItem.kcal,
   }
 
-  const response = await fetch(path, {
+  logger.trace(requestBody)
+
+  const requestData = {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
-  })
-  const results = await response.json()
+    body: JSON.stringify(requestBody),
+  }
+  const results = await requestApi(path, requestData)
+}
 
-  logger.trace(results)
+export async function deleteTrainingItem(trainingItemId) {
+  logger.trace('deleteTrainingItem')
+  logger.trace(trainingItemId)
+
+  // null check
+  if (
+    trainingItemId == null ||
+    trainingItemId == '' ||
+    trainingItem.userId == null ||
+    trainingItem.userId == ''
+  ) {
+    logger.error('Error: Invalid value of trainingItem.')
+  }
+
+  // type check
+  if (
+    typeof trainingItemId !== 'number' ||
+    typeof trainingItem.userId !== 'number'
+  ) {
+    logger.error('Error: Invalid type of trainingItem.')
+  }
+
+  const path = '/training-items/' + trainingItemId
+
+  const requestData = {
+    method: 'DELETE',
+  }
+  const results = await requestApi(path, requestData)
 }
 </script>
