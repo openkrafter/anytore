@@ -3,6 +3,8 @@ import '@/components/containers/DescribeTrainingItems.css'
 import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
 import UpdateTrainingItem from '@/components/containers/UpdateTrainingItem.vue'
 import logger from '@/logger'
+import { Modal } from 'flowbite'
+import { openModal } from '@/components/containers/CommonMethods.vue'
 
 export default {
   components: {
@@ -12,6 +14,7 @@ export default {
   data() {
     return {
       trainingItems: [],
+      modal: null,
     }
   },
 
@@ -42,8 +45,14 @@ export default {
   },
 
   methods: {
-    updateTrainingItem() {
+    updateTrainingItem(trainingItem) {
       logger.trace('update training!')
+      const modalId = 'update-training-item-modal' + trainingItem.id
+      this.modal = openModal(modalId)
+    },
+
+    closeModal() {
+      this.modal.hide()
     },
   },
 
@@ -64,9 +73,7 @@ export default {
       <h3 class="text-xl font-bold">{{ trainingItem.name }}</h3>
 
       <button
-        :data-modal-target="'update-training-item-modal' + trainingItem.id"
-        :data-modal-toggle="'update-training-item-modal' + trainingItem.id"
-        @click="updateTrainingItem"
+        @click="updateTrainingItem(trainingItem)"
         class="absolute top-3 right-3 inline-flex justify-center items-center bg-white hover:bg-slate-100 active:bg-slate-300"
       >
         <svg
@@ -83,6 +90,7 @@ export default {
             d="m14.258 7.985-3.025 3.025A3 3 0 1 1 6.99 6.768l3.026-3.026A3.01 3.01 0 0 1 8.411 2H2.167A2.169 2.169 0 0 0 0 4.167v11.666A2.169 2.169 0 0 0 2.167 18h11.666A2.169 2.169 0 0 0 16 15.833V9.589a3.011 3.011 0 0 1-1.742-1.604Z"
           />
         </svg>
+        <slot />
       </button>
 
       <div
@@ -91,7 +99,7 @@ export default {
         aria-hidden="true"
         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <UpdateTrainingItem />
+        <UpdateTrainingItem :trainingItem=trainingItem @close-modal="closeModal()"/>
       </div>
 
       <div class="ml-2">

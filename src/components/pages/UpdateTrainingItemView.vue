@@ -3,6 +3,7 @@ import UpdateTrainingItem from '@/components/containers/UpdateTrainingItem.vue'
 import DescribeTrainingItems from '@/components/containers/DescribeTrainingItems.vue'
 import LightBlueButton from '@/components/basics/LightBlueButton.vue'
 import logger from '@/logger'
+import { openModal } from '@/components/containers/CommonMethods.vue'
 
 export default {
   components: {
@@ -14,13 +15,20 @@ export default {
   data() {
     return {
       trainingItem: {},
+      modal: null,
     }
   },
 
   methods: {
-    addTrainingItem() {
+    addTrainingItem(modalId) {
       logger.trace('add training!')
+      this.modal = openModal(modalId)
     },
+
+    closeModal() {
+      this.modal.hide()
+    },
+
   },
 }
 </script>
@@ -30,9 +38,7 @@ export default {
     <div class="flex justify-between">
       <h1 class="text-4xl">あなたのトレーニング</h1>
       <LightBlueButton
-        data-modal-target="add-training-item-modal"
-        data-modal-toggle="add-training-item-modal"
-        @click="addTrainingItem"
+        @click="addTrainingItem('add-training-item-modal')"
       >
         追加
       </LightBlueButton>
@@ -44,7 +50,7 @@ export default {
         aria-hidden="true"
         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <UpdateTrainingItem />
+        <UpdateTrainingItem @close-modal="closeModal()"/>
       </div>
     </div>
     <div class="mt-4 ml-4">
