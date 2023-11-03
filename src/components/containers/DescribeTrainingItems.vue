@@ -4,6 +4,7 @@ import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
 import UpdateTrainingItem from '@/components/containers/UpdateTrainingItem.vue'
 import logger from '@/logger'
 import { Modal } from 'flowbite'
+import { openModal } from '@/components/containers/CommonMethods.vue'
 
 export default {
   components: {
@@ -13,6 +14,7 @@ export default {
   data() {
     return {
       trainingItems: [],
+      modal: null,
     }
   },
 
@@ -43,28 +45,14 @@ export default {
   },
 
   methods: {
-    updateTrainingItem() {
+    updateTrainingItem(trainingItem) {
       logger.trace('update training!')
-      const $targetEl = document.getElementById('update-training-item-modal1')
-      const options = {
-        placement: 'bottom-right',
-        backdrop: 'dynamic',
-        backdropClasses:
-          'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
-        closable: true,
-        onHide: () => {
-          console.log('modal is hidden')
-        },
-        onShow: () => {
-          console.log('modal is shown')
-        },
-        onToggle: () => {
-          console.log('modal has been toggled')
-        },
-      }
+      const modalId = 'update-training-item-modal' + trainingItem.id
+      this.modal = openModal(modalId)
+    },
 
-      const modal = new Modal($targetEl, options)
-      modal.toggle()
+    closeModal() {
+      this.modal.hide()
     },
   },
 
@@ -85,9 +73,7 @@ export default {
       <h3 class="text-xl font-bold">{{ trainingItem.name }}</h3>
 
       <button
-        :data-modal-target="'update-training-item-modal' + trainingItem.id"
-        :data-modal-toggle="'update-training-item-modal' + trainingItem.id"
-        @click="updateTrainingItem"
+        @click="updateTrainingItem(trainingItem)"
         class="absolute top-3 right-3 inline-flex justify-center items-center bg-white hover:bg-slate-100 active:bg-slate-300"
       >
         <svg
@@ -113,7 +99,7 @@ export default {
         aria-hidden="true"
         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <UpdateTrainingItem />
+        <UpdateTrainingItem :trainingItem=trainingItem @close-modal="closeModal()"/>
       </div>
 
       <div class="ml-2">
