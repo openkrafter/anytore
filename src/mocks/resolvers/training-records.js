@@ -6,22 +6,22 @@ const listTraningRecord = (req, res, ctx) => {
     ctx.json([
       {
         id: 1,
-        user_id: 1,
-        training_item_id: 1,
+        userId: 1,
+        trainingItemId: 1,
         record: 2,
         date: 1697723834,
       },
       {
         id: 2,
-        user_id: 1,
-        training_item_id: 2,
+        userId: 1,
+        trainingItemId: 2,
         record: 30,
         date: 1697810234,
       },
       {
         id: 3,
-        user_id: 1,
-        training_item_id: 3,
+        userId: 1,
+        trainingItemId: 3,
         record: 45,
         date: 1697846234,
       },
@@ -39,8 +39,8 @@ const getTraningRecord = (req, res, ctx) => {
     ctx.status(200),
     ctx.json({
       id: req.params.trainingItemId,
-      user_id: 1,
-      training_item_id: 1,
+      userId: 1,
+      trainingItemId: 1,
       record: 2,
       date: 1697723834,
     })
