@@ -13,8 +13,8 @@ export async function listTrainingItems() {
     if (
       trainingItemResult.id == null ||
       trainingItemResult.id == '' ||
-      trainingItemResult.user_id == null ||
-      trainingItemResult.user_id == '' ||
+      trainingItemResult.userId == null ||
+      trainingItemResult.userId == '' ||
       trainingItemResult.name == null ||
       trainingItemResult.name == '' ||
       trainingItemResult.type == null ||
@@ -30,7 +30,7 @@ export async function listTrainingItems() {
     // type check
     if (
       typeof trainingItemResult.id !== 'number' ||
-      typeof trainingItemResult.user_id !== 'number' ||
+      typeof trainingItemResult.userId !== 'number' ||
       typeof trainingItemResult.name !== 'string' ||
       typeof trainingItemResult.type !== 'string' ||
       typeof trainingItemResult.unit !== 'string' ||
@@ -141,7 +141,6 @@ export async function updateTrainingItem(trainingItem) {
   const path = '/training-items/' + trainingItem.id
 
   const requestBody = {
-    id: trainingItem.id,
     userId: trainingItem.userId,
     name: trainingItem.name,
     type: trainingItem.type,
