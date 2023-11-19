@@ -12,4 +12,16 @@ export function openModal(modalId) {
   modal.show()
   return modal
 }
+
+export function displayedUnitName(unit) {
+  if (unit == 'hour') {
+    return '時間 (h)'
+  } else if (unit == 'minute') {
+    return '時間 (min)'
+  } else if (unit == 'count') {
+    return '回数'
+  } else if (unit == 'distance') {
+    return '距離'
+  }
+}
 </script>
