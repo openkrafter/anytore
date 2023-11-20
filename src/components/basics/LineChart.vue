@@ -1,16 +1,4 @@
 <script>
-// import logger from '@/logger'
-// import {
-//   Chart as ChartJS,
-//   Title,
-//   Tooltip,
-//   Legend,
-//   BarElement,
-//   CategoryScale,
-//   LinearScale,
-// } from 'chart.js'
-// import { Bar } from 'vue-chartjs'
-
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,8 +10,6 @@ import {
   Legend,
 } from 'chart.js'
 import { Line } from 'vue-chartjs'
-
-// ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 ChartJS.register(
   CategoryScale,
@@ -37,7 +23,6 @@ ChartJS.register(
 
 export default {
   components: {
-    // Bar,
     Line,
   },
 
@@ -70,8 +55,6 @@ export default {
             align: 'end',
             pointStyle: 'circle',
             labels: {
-              // fontSize: 20,
-              // fontColor: '#F00',
               usePointStyle: true,
             },
           },
@@ -101,6 +84,5 @@ export default {
 </script>
 
 <template>
-  <!-- <Bar :data="data" :options="options" /> -->
   <Line :data="data" :options="options" />
 </template>

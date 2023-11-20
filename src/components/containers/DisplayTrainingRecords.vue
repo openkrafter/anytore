@@ -100,54 +100,19 @@ export default {
     },
 
     applyTrainingRecordsChartData() {
-      if (this.currentAggregationUnit === AGGREGATION_UNIT.DAILY) {
-        this.applyTrainingRecordsDailyChartData()
-      } else if (this.currentAggregationUnit === AGGREGATION_UNIT.WEEKLY) {
-        this.applyTrainingRecordsWeeklyChartData()
-      } else if (this.currentAggregationUnit === AGGREGATION_UNIT.MONTHLY) {
-        this.applyTrainingRecordsMonthlyChartData()
-      }
-    },
-
-    applyTrainingRecordsDailyChartData() {
       this.trainingRecordsChartData = []
 
       this.trainingItems.forEach((trainingItem) => {
-        var chartType = ''
-        var chartColor = ''
-        if (trainingItem.type === 'aerobic') {
-          chartType = CHART_TYPE.BAR
-          chartColor = TRAINING_RECORDS_AEROBIC_CHART_COLOR
-        } else if (trainingItem.type === 'anaerobic') {
-          chartType = CHART_TYPE.LINE
-          chartColor = TRAINING_RECORDS_ANAEROBIC_CHART_COLOR
+        var chartInputData = {}
+
+        if (this.currentAggregationUnit === AGGREGATION_UNIT.DAILY) {
+          chartInputData = this.createDailyChartInputData(trainingItem)
+        } else if (this.currentAggregationUnit === AGGREGATION_UNIT.WEEKLY) {
+          chartInputData = this.createWeeklyChartInputData(trainingItem)
+        } else if (this.currentAggregationUnit === AGGREGATION_UNIT.MONTHLY) {
+          chartInputData = this.createMonthlyChartInputData(trainingItem)
         }
 
-        TRAINING_RECORDS_AEROBIC_CHART_COLOR
-
-        var chartInputData = {
-          labels: [],
-          datasets: [
-            {
-              label: displayedUnitName(trainingItem.unit),
-              backgroundColor: chartColor,
-              barPercentage: 0.5,
-              // pointStyle: 'triangle',
-              data: [],
-            },
-          ],
-        }
-
-        this.filteredTrainingRecords.forEach((trainingRecord) => {
-          if (trainingItem.id === trainingRecord.trainingItemId) {
-            var dateTime = new Date(trainingRecord.date * 1000)
-            chartInputData.labels.push([
-              dateTime.toLocaleDateString('ja-JP'),
-              trainingItem.kcal * trainingRecord.record + ' kcal',
-            ])
-            chartInputData.datasets[0].data.push(trainingRecord.record)
-          }
-        })
         if (chartInputData.labels.length > DISPLAYED_DATA_POINTS) {
           chartInputData.labels = chartInputData.labels.slice(
             -DISPLAYED_DATA_POINTS
@@ -158,7 +123,7 @@ export default {
 
         var trainingRecordChartData = {
           visible: true,
-          chartType: chartType,
+          chartType: this.getChartType(trainingItem),
           data: chartInputData,
           title: trainingItem.name,
         }
@@ -166,16 +131,150 @@ export default {
       })
     },
 
-    applyTrainingRecordsWeeklyChartData() {
-      logger.trace('weekly')
-    },
-
-    applyTrainingRecordsMonthlyChartData() {
-      logger.trace('monthly')
-    },
-
     compareTrainingRecordDate(a, b) {
       return a.date - b.date
+    },
+
+    createDailyChartInputData(trainingItem) {
+      var chartInputData = this.initChartInputData(trainingItem)
+
+      this.filteredTrainingRecords.forEach((trainingRecord) => {
+        if (trainingItem.id === trainingRecord.trainingItemId) {
+          var dateTime = new Date(trainingRecord.date * 1000)
+          chartInputData.labels.push([
+            dateTime.toLocaleDateString('ja-JP'),
+            trainingItem.kcal * trainingRecord.record + ' kcal',
+          ])
+          chartInputData.datasets[0].data.push(trainingRecord.record)
+        }
+      })
+
+      return chartInputData
+    },
+
+    createWeeklyChartInputData(trainingItem) {
+      var chartInputData = this.initChartInputData(trainingItem)
+
+      var firstTrainingDate = new Date(
+        this.filteredTrainingRecords[0].date * 1000
+      )
+      var beforeMonday = this.getBeforeMonday(firstTrainingDate)
+      var nextMonday = new Date(beforeMonday)
+      nextMonday.setDate(beforeMonday.getDate() + 7)
+
+      var weeklyTrainingRecords = {}
+      this.filteredTrainingRecords.forEach((trainingRecord) => {
+        if (trainingItem.id === trainingRecord.trainingItemId) {
+          var trainingDate = new Date(trainingRecord.date * 1000)
+
+          if (nextMonday <= trainingDate.getTime()) {
+            beforeMonday = nextMonday
+            nextMonday = new Date(beforeMonday)
+            nextMonday.setDate(beforeMonday.getDate() + 7)
+            return
+          }
+
+          if (weeklyTrainingRecords[beforeMonday.getTime()] === undefined) {
+            weeklyTrainingRecords[beforeMonday.getTime()] = [
+              trainingRecord.record,
+            ]
+          } else {
+            weeklyTrainingRecords[beforeMonday.getTime()].push(
+              trainingRecord.record
+            )
+          }
+        }
+      })
+
+      var sortedWeeklyTrainingRecords = Object.keys(
+        weeklyTrainingRecords
+      ).sort()
+      sortedWeeklyTrainingRecords.forEach((beforeMondayTimeStamp) => {
+        var weeklyAverage = this.calculateAverage(
+          weeklyTrainingRecords[beforeMondayTimeStamp]
+        )
+
+        var labelDate = new Date()
+        labelDate.setTime(beforeMondayTimeStamp)
+        var dateLabel = labelDate.toLocaleDateString('ja-JP') + ' 週'
+        var calorieLabel =
+          '合計' +
+          trainingItem.kcal *
+            weeklyAverage *
+            weeklyTrainingRecords[beforeMondayTimeStamp].length +
+          ' kcal'
+
+        chartInputData.labels.push([dateLabel, calorieLabel])
+        chartInputData.datasets[0].data.push(weeklyAverage)
+      })
+
+      return chartInputData
+    },
+
+    getBeforeMonday(date) {
+      var delta = 1 - date.getDay()
+      if (date.getDay() === 0) {
+        delta = -6
+      }
+
+      var beforeMonday = new Date(date)
+      beforeMonday.setDate(date.getDate() + delta)
+      return beforeMonday
+    },
+
+    calculateAverage(array) {
+      var sum = 0.0
+      array.forEach((num) => {
+        sum = sum + num
+      })
+      return sum / array.length
+    },
+
+    createMonthlyChartInputData(trainingItem) {
+      var chartInputData = this.initChartInputData(trainingItem)
+
+      // TODO
+
+      return chartInputData
+    },
+
+    initChartInputData(trainingItem) {
+      var labelString = ''
+      if (this.currentAggregationUnit === AGGREGATION_UNIT.DAILY) {
+        labelString = displayedUnitName(trainingItem.unit)
+      } else if (this.currentAggregationUnit === AGGREGATION_UNIT.WEEKLY) {
+        labelString = '平均' + displayedUnitName(trainingItem.unit)
+      } else if (this.currentAggregationUnit === AGGREGATION_UNIT.MONTHLY) {
+        labelString = '平均' + displayedUnitName(trainingItem.unit)
+      }
+
+      return {
+        labels: [],
+        datasets: [
+          {
+            label: labelString,
+            backgroundColor: this.getChartColor(trainingItem),
+            barPercentage: 0.5,
+            data: [],
+          },
+        ],
+      }
+    },
+
+    getChartColor(trainingItem) {
+      if (trainingItem.type === 'aerobic') {
+        return TRAINING_RECORDS_AEROBIC_CHART_COLOR
+      } else if (trainingItem.type === 'anaerobic') {
+        return TRAINING_RECORDS_ANAEROBIC_CHART_COLOR
+      }
+    },
+
+    getChartType(trainingItem) {
+      if (trainingItem.type === 'aerobic') {
+        return CHART_TYPE.BAR
+      } else if (trainingItem.type === 'anaerobic') {
+        return CHART_TYPE.LINE
+      }
     },
   },
 }
