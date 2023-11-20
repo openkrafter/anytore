@@ -1,6 +1,7 @@
 <script>
 import logger from '@/logger'
 import BarChart from '@/components/basics/BarChart.vue'
+import LineChart from '@/components/basics/LineChart.vue'
 import { mapStores } from 'pinia'
 import { useUserStore } from '@/stores/user'
 import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
@@ -8,7 +9,8 @@ import { listTrainingRecords } from '@/components/apis/TrainingRecord.vue'
 import { displayedUnitName } from '@/components/containers/CommonMethods.vue'
 
 const DISPLAYED_DATA_POINTS = 7
-const TRAINING_RECORDS_CHART_COLOR = '#3C59FF'
+const TRAINING_RECORDS_AEROBIC_CHART_COLOR = '#3C59FF'
+const TRAINING_RECORDS_ANAEROBIC_CHART_COLOR = '#ED1A3D'
 
 const AGGREGATION_UNIT = Object.freeze({
   DAILY: '日単位で表示する',
@@ -16,9 +18,15 @@ const AGGREGATION_UNIT = Object.freeze({
   MONTHLY: '月単位で表示する',
 })
 
+const CHART_TYPE = Object.freeze({
+  BAR: '有酸素運動',
+  LINE: '無酸素運動',
+})
+
 export default {
   components: {
     BarChart,
+    LineChart,
   },
 
   data() {
@@ -54,6 +62,7 @@ export default {
 
   async created() {
     this.AGGREGATION_UNIT = AGGREGATION_UNIT
+    this.CHART_TYPE = CHART_TYPE
 
     this.initDisplayedDate()
     await this.initTrainingData()
@@ -71,7 +80,12 @@ export default {
 
     initDisplayedDate() {
       var currentTime = new Date()
-      this.inputDate = '2023-09-19'
+      this.inputDate =
+        currentTime.getFullYear() +
+        '-' +
+        (currentTime.getMonth() + 1) +
+        '-' +
+        currentTime.getDate()
     },
 
     changeDisplayCondition() {
@@ -99,13 +113,26 @@ export default {
       this.trainingRecordsChartData = []
 
       this.trainingItems.forEach((trainingItem) => {
+        var chartType = ''
+        var chartColor = ''
+        if (trainingItem.type === 'aerobic') {
+          chartType = CHART_TYPE.BAR
+          chartColor = TRAINING_RECORDS_AEROBIC_CHART_COLOR
+        } else if (trainingItem.type === 'anaerobic') {
+          chartType = CHART_TYPE.LINE
+          chartColor = TRAINING_RECORDS_ANAEROBIC_CHART_COLOR
+        }
+
+        TRAINING_RECORDS_AEROBIC_CHART_COLOR
+
         var chartInputData = {
           labels: [],
           datasets: [
             {
               label: displayedUnitName(trainingItem.unit),
-              backgroundColor: TRAINING_RECORDS_CHART_COLOR,
+              backgroundColor: chartColor,
               barPercentage: 0.5,
+              // pointStyle: 'triangle',
               data: [],
             },
           ],
@@ -131,6 +158,7 @@ export default {
 
         var trainingRecordChartData = {
           visible: true,
+          chartType: chartType,
           data: chartInputData,
           title: trainingItem.name,
         }
@@ -203,7 +231,18 @@ export default {
       :key="windowWidth"
     >
       <BarChart
-        v-if="trainingRecordChartData.visible"
+        v-if="
+          trainingRecordChartData.visible &&
+          trainingRecordChartData.chartType === CHART_TYPE.BAR
+        "
+        :data="trainingRecordChartData.data"
+        :title="trainingRecordChartData.title"
+      />
+      <LineChart
+        v-else-if="
+          trainingRecordChartData.visible &&
+          trainingRecordChartData.chartType === CHART_TYPE.LINE
+        "
         :data="trainingRecordChartData.data"
         :title="trainingRecordChartData.title"
       />
