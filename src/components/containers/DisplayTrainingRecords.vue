@@ -29,8 +29,6 @@ export default {
 
   data() {
     return {
-      windowWidth: window.innerWidth,
-
       trainingItems: [],
       trainingRecords: [],
 
@@ -66,14 +64,10 @@ export default {
   },
 
   mounted: function () {
-    window.addEventListener('resize', this.resizeWindow)
+    window.addEventListener('resize', this.refreshChart)
   },
 
   methods: {
-    resizeWindow() {
-      this.windowWidth = window.innerWidth
-    },
-
     initDisplayedDate() {
       var currentTime = new Date()
       this.inputDate =
@@ -87,6 +81,7 @@ export default {
     changeDisplayCondition() {
       logger.trace('change condition')
       this.applyTrainingRecordsChartData()
+      this.refreshChart()
     },
 
     async initTrainingData() {
@@ -133,19 +128,85 @@ export default {
 
     createDailyChartInputData(trainingItem) {
       var chartInputData = this.initChartInputData(trainingItem)
+      var dailyTrainingRecordsForChart =
+        this.createDailyTrainingRecordsForChart(trainingItem)
 
-      this.filteredTrainingRecords.forEach((trainingRecord) => {
-        if (trainingItem.id === trainingRecord.trainingItemId) {
-          var dateTime = new Date(trainingRecord.date * 1000)
-          chartInputData.labels.push([
-            dateTime.toLocaleDateString('ja-JP'),
-            trainingItem.kcal * trainingRecord.record + ' kcal',
-          ])
-          chartInputData.datasets[0].data.push(trainingRecord.record)
-        }
+      var sortedDailyTrainingRecordsForChartKeys = Object.keys(
+        dailyTrainingRecordsForChart
+      ).sort(this.compareStringNumber)
+
+      sortedDailyTrainingRecordsForChartKeys.forEach((chartDateKey) => {
+        var year = chartDateKey.substring(0, 4)
+        var month = chartDateKey.substring(4, 6)
+        var date = chartDateKey.substring(6, 8)
+
+        var dateLabel = year + '/' + month + '/' + date
+        var calorieLabel =
+          trainingItem.kcal * dailyTrainingRecordsForChart[chartDateKey] +
+          ' kcal'
+
+        chartInputData.labels.push([dateLabel, calorieLabel])
+        chartInputData.datasets[0].data.push(
+          dailyTrainingRecordsForChart[chartDateKey]
+        )
       })
 
       return chartInputData
+    },
+
+    createDailyTrainingRecordsForChart(trainingItem) {
+      var trainingFirstDate = new Date(
+        this.filteredTrainingRecords[0].date * 1000
+      )
+      var trainingLastDate = new Date(
+        this.filteredTrainingRecords.slice(-1)[0].date * 1000
+      )
+
+      var initFirstDate = new Date(trainingFirstDate)
+      initFirstDate.setDate(trainingFirstDate.getDate() - 14)
+
+      var initLastDate = new Date(this.inputDate + ' 23:59:59')
+
+      // zero init
+      var dailyTrainingRecordsForChart = {}
+      var delta = 86400 * 1000 // 1 day unix time
+      for (
+        var dateTimeStamp = initFirstDate.getTime();
+        dateTimeStamp < initLastDate.getTime();
+        dateTimeStamp += delta
+      ) {
+        var dateKey = new Date(dateTimeStamp)
+        var key =
+          ('0000' + dateKey.getFullYear()).slice(-4) +
+          ('00' + (dateKey.getMonth() + 1)).slice(-2) +
+          ('00' + dateKey.getDate()).slice(-2)
+        dailyTrainingRecordsForChart[key] = 0.0
+      }
+
+      var displayedDateFilteredTrainingRecords = this.trainingRecords.filter(
+        (trainingRecord) => {
+          var displayedDate = new Date(this.inputDate + ' 23:59:59')
+          return trainingRecord.date * 1000 < displayedDate.getTime()
+        }
+      )
+
+      displayedDateFilteredTrainingRecords.forEach((trainingRecord) => {
+        if (trainingItem.id === trainingRecord.trainingItemId) {
+          var trainingDate = new Date(trainingRecord.date * 1000)
+          var trainingDateKey =
+            ('0000' + trainingDate.getFullYear()).slice(-4) +
+            ('00' + (trainingDate.getMonth() + 1)).slice(-2) +
+            ('00' + trainingDate.getDate()).slice(-2)
+
+          dailyTrainingRecordsForChart[trainingDateKey] += trainingRecord.record
+        }
+      })
+
+      return dailyTrainingRecordsForChart
+    },
+
+    compareStringNumber(a, b) {
+      return Number(a) - Number(b)
     },
 
     createWeeklyChartInputData(trainingItem) {
@@ -272,6 +333,17 @@ export default {
         return CHART_TYPE.LINE
       }
     },
+
+    async refreshChart() {
+      this.trainingRecordsChartData.forEach((trainingRecordChartData) => {
+        trainingRecordChartData.visible = !trainingRecordChartData.visible
+      })
+      await this.$nextTick(() => {
+        this.trainingRecordsChartData.forEach((trainingRecordChartData) => {
+          trainingRecordChartData.visible = !trainingRecordChartData.visible
+        })
+      })
+    },
   },
 }
 </script>
@@ -323,7 +395,6 @@ export default {
     <div
       v-for="trainingRecordChartData in trainingRecordsChartData"
       class="mt-4 grid col-start-2 col-span-8"
-      :key="windowWidth"
     >
       <BarChart
         v-if="
