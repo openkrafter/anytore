@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "^4.4.0",
     "flowbite": "^1.8.1",
     "msw": "^1.2.3",
     "pinia": "^2.1.6",
     "pino": "^8.16.0",
     "vue": "^3.3.4",
+    "vue-chartjs": "^5.2.0",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {

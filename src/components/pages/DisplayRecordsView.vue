@@ -1,47 +1,34 @@
 <script>
-import TodoAdd from '@/components/containers/TodoAdd.vue'
-import TodoList from '@/components/containers/TodoList.vue'
-import { mapActions, mapStores } from 'pinia'
-import { useTodosStore } from '@/stores/todos'
+import logger from '@/logger'
+import DisplayTrainingRecords from '@/components/containers/DisplayTrainingRecords.vue'
+import DisplayCompositionRecords from '@/components/containers/DisplayCompositionRecords.vue'
 
 export default {
   components: {
-    TodoAdd,
-    TodoList,
+    DisplayTrainingRecords,
+    DisplayCompositionRecords,
   },
 
-  computed: {
-    ...mapStores(useTodosStore),
-  },
-
-  methods: {
-    ...mapActions(useTodosStore, ['addTodo', 'clearDoneTodos']),
-
-    addNewTodo(newTodoText) {
-      if (!newTodoText) return alert('文字を入力してください')
-
-      if (newTodoText === '') {
-        alert('文字を入力してください')
-        return
-      }
-
-      this.addTodo({
-        isDone: false,
-        text: newTodoText,
-      })
-    },
+  data() {
+    return {
+      data: {},
+    }
   },
 }
 </script>
 
 <template>
-  <TodoAdd @delete-done="clearDoneTodos" @add-todo="addNewTodo" />
-  <p v-if="todosStore.todos.length === 0">ToDoがまだありません！</p>
-  <TodoList v-else :todos="todosStore.todos" />
-</template>
+  <div class="m-4">
+    <h1 class="text-4xl">これまでの頑張りとあなたのカラダ</h1>
 
-<style>
-.todo-done {
-  text-decoration: line-through;
-}
-</style>
+    <div class="mt-4 ml-4">
+      <div>
+        <DisplayTrainingRecords />
+      </div>
+      <h2>体組成データの記録</h2>
+      <div>
+        <DisplayCompositionRecords />
+      </div>
+    </div>
+  </div>
+</template>

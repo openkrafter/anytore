@@ -1,0 +1,5126 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1680328800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 77,
+    "date": 1680328800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 100,
+    "date": 1680328800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1680328800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1680415200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 101,
+    "date": 1680415200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 72,
+    "date": 1680415200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 28,
+    "date": 1680415200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1680501600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 37,
+    "date": 1680501600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 62,
+    "date": 1680501600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1680501600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1680588000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 54,
+    "date": 1680588000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 87,
+    "date": 1680588000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1680588000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1680674400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 57,
+    "date": 1680674400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 115,
+    "date": 1680674400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 36,
+    "date": 1680674400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1680760800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 64,
+    "date": 1680760800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 111,
+    "date": 1680760800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1680760800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1680847200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 61,
+    "date": 1680847200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 94,
+    "date": 1680847200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1680847200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1680933600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 62,
+    "date": 1680933600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 56,
+    "date": 1680933600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1680933600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1681020000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 53,
+    "date": 1681020000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 105,
+    "date": 1681020000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1681020000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681106400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 98,
+    "date": 1681106400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 96,
+    "date": 1681106400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1681106400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1681192800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 116,
+    "date": 1681192800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 110,
+    "date": 1681192800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1681192800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1681279200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 94,
+    "date": 1681279200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 78,
+    "date": 1681279200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 28,
+    "date": 1681279200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681365600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 90,
+    "date": 1681365600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 102,
+    "date": 1681365600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1681365600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681452000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 106,
+    "date": 1681452000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 107,
+    "date": 1681452000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1681452000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1681538400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 36,
+    "date": 1681538400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 64,
+    "date": 1681538400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1681538400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681624800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 74,
+    "date": 1681624800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 68,
+    "date": 1681624800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1681624800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681711200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 104,
+    "date": 1681711200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1681711200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1681711200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1681797600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 89,
+    "date": 1681797600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 94,
+    "date": 1681797600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 36,
+    "date": 1681797600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681884000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 61,
+    "date": 1681884000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 78,
+    "date": 1681884000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1681884000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1681970400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 113,
+    "date": 1681970400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 100,
+    "date": 1681970400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1681970400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1682056800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 89,
+    "date": 1682056800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 59,
+    "date": 1682056800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1682056800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1682143200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 55,
+    "date": 1682143200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 94,
+    "date": 1682143200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1682143200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1682229600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 50,
+    "date": 1682229600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 65,
+    "date": 1682229600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1682229600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1682316000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 96,
+    "date": 1682316000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 38,
+    "date": 1682316000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1682316000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1682402400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 95,
+    "date": 1682402400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 103,
+    "date": 1682402400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1682402400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1682488800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 63,
+    "date": 1682488800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 87,
+    "date": 1682488800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1682488800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1682575200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 69,
+    "date": 1682575200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 48,
+    "date": 1682575200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1682575200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1682661600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 88,
+    "date": 1682661600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 65,
+    "date": 1682661600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 36,
+    "date": 1682661600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1682748000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 64,
+    "date": 1682748000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 120,
+    "date": 1682748000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1682748000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1682834400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 90,
+    "date": 1682834400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 37,
+    "date": 1682834400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 24,
+    "date": 1682834400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1682920800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 113,
+    "date": 1682920800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 87,
+    "date": 1682920800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 28,
+    "date": 1682920800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1683007200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 110,
+    "date": 1683007200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 104,
+    "date": 1683007200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1683007200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1683093600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 91,
+    "date": 1683093600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 88,
+    "date": 1683093600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1683093600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1683180000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 70,
+    "date": 1683180000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 43,
+    "date": 1683180000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1683180000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1683266400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 100,
+    "date": 1683266400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 49,
+    "date": 1683266400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1683266400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1683352800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 30,
+    "date": 1683352800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 120,
+    "date": 1683352800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1683352800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1683439200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 48,
+    "date": 1683439200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 110,
+    "date": 1683439200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 22,
+    "date": 1683439200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1683525600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 59,
+    "date": 1683525600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 32,
+    "date": 1683525600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1683525600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1683612000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 76,
+    "date": 1683612000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 49,
+    "date": 1683612000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1683612000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1683698400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 89,
+    "date": 1683698400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 103,
+    "date": 1683698400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 35,
+    "date": 1683698400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1683784800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 53,
+    "date": 1683784800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 37,
+    "date": 1683784800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1683784800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1683871200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 87,
+    "date": 1683871200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 73,
+    "date": 1683871200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 22,
+    "date": 1683871200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1683957600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 84,
+    "date": 1683957600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 61,
+    "date": 1683957600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1683957600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1684044000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 69,
+    "date": 1684044000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 43,
+    "date": 1684044000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1684044000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684130400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 93,
+    "date": 1684130400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 78,
+    "date": 1684130400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1684130400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684216800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 33,
+    "date": 1684216800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 120,
+    "date": 1684216800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1684216800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1684303200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1684303200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 75,
+    "date": 1684303200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 35,
+    "date": 1684303200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1684389600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 56,
+    "date": 1684389600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 66,
+    "date": 1684389600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1684389600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684476000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 65,
+    "date": 1684476000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 107,
+    "date": 1684476000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1684476000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684562400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 114,
+    "date": 1684562400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 46,
+    "date": 1684562400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1684562400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1684648800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1684648800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 92,
+    "date": 1684648800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1684648800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684735200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 48,
+    "date": 1684735200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 52,
+    "date": 1684735200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1684735200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684821600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 56,
+    "date": 1684821600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 118,
+    "date": 1684821600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 36,
+    "date": 1684821600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684908000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 45,
+    "date": 1684908000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 50,
+    "date": 1684908000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1684908000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1684994400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 92,
+    "date": 1684994400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 39,
+    "date": 1684994400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1684994400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1685080800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 110,
+    "date": 1685080800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 46,
+    "date": 1685080800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1685080800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1685167200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 101,
+    "date": 1685167200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 103,
+    "date": 1685167200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1685167200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1685253600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 60,
+    "date": 1685253600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 31,
+    "date": 1685253600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1685253600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1685340000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 52,
+    "date": 1685340000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 112,
+    "date": 1685340000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1685340000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1685426400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 79,
+    "date": 1685426400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 35,
+    "date": 1685426400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1685426400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1685512800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 36,
+    "date": 1685512800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 75,
+    "date": 1685512800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1685512800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1685599200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 42,
+    "date": 1685599200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 48,
+    "date": 1685599200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1685599200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1685685600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 30,
+    "date": 1685685600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 78,
+    "date": 1685685600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1685685600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1685772000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 38,
+    "date": 1685772000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 118,
+    "date": 1685772000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1685772000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1685858400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 41,
+    "date": 1685858400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 87,
+    "date": 1685858400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1685858400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1685944800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 71,
+    "date": 1685944800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 46,
+    "date": 1685944800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1685944800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686031200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 85,
+    "date": 1686031200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 86,
+    "date": 1686031200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 22,
+    "date": 1686031200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686117600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 54,
+    "date": 1686117600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 86,
+    "date": 1686117600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1686117600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686204000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 33,
+    "date": 1686204000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 49,
+    "date": 1686204000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1686204000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686290400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 62,
+    "date": 1686290400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 115,
+    "date": 1686290400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1686290400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1686376800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 34,
+    "date": 1686376800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 90,
+    "date": 1686376800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1686376800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1686463200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 108,
+    "date": 1686463200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 52,
+    "date": 1686463200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1686463200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686549600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 52,
+    "date": 1686549600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 49,
+    "date": 1686549600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 22,
+    "date": 1686549600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686636000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 113,
+    "date": 1686636000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 56,
+    "date": 1686636000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1686636000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1686722400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 107,
+    "date": 1686722400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 68,
+    "date": 1686722400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1686722400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1686808800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 69,
+    "date": 1686808800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 83,
+    "date": 1686808800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1686808800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1686895200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 56,
+    "date": 1686895200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 66,
+    "date": 1686895200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1686895200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1686981600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 115,
+    "date": 1686981600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 80,
+    "date": 1686981600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1686981600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687068000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 47,
+    "date": 1687068000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 35,
+    "date": 1687068000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1687068000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687154400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 47,
+    "date": 1687154400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 81,
+    "date": 1687154400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1687154400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687240800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 93,
+    "date": 1687240800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 71,
+    "date": 1687240800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1687240800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1687327200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 52,
+    "date": 1687327200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 76,
+    "date": 1687327200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1687327200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687413600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 70,
+    "date": 1687413600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 104,
+    "date": 1687413600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1687413600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1687500000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 76,
+    "date": 1687500000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 96,
+    "date": 1687500000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1687500000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687586400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 41,
+    "date": 1687586400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 50,
+    "date": 1687586400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1687586400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687672800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 71,
+    "date": 1687672800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 38,
+    "date": 1687672800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1687672800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1687759200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 46,
+    "date": 1687759200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 72,
+    "date": 1687759200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1687759200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1687845600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 60,
+    "date": 1687845600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1687845600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 24,
+    "date": 1687845600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1687932000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 74,
+    "date": 1687932000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 115,
+    "date": 1687932000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1687932000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1688018400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 47,
+    "date": 1688018400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 81,
+    "date": 1688018400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1688018400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1688104800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 99,
+    "date": 1688104800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 31,
+    "date": 1688104800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1688104800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1688191200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 115,
+    "date": 1688191200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 64,
+    "date": 1688191200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1688191200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1688277600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 34,
+    "date": 1688277600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 85,
+    "date": 1688277600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1688277600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1688364000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 63,
+    "date": 1688364000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 55,
+    "date": 1688364000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1688364000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1688450400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 87,
+    "date": 1688450400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 34,
+    "date": 1688450400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1688450400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1688536800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 94,
+    "date": 1688536800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 83,
+    "date": 1688536800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1688536800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1688623200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 31,
+    "date": 1688623200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 117,
+    "date": 1688623200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 28,
+    "date": 1688623200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1688709600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 106,
+    "date": 1688709600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 86,
+    "date": 1688709600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1688709600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1688796000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 86,
+    "date": 1688796000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 50,
+    "date": 1688796000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1688796000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1688882400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 31,
+    "date": 1688882400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 52,
+    "date": 1688882400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1688882400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1688968800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 35,
+    "date": 1688968800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 57,
+    "date": 1688968800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1688968800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1689055200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 44,
+    "date": 1689055200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 47,
+    "date": 1689055200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1689055200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1689141600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 58,
+    "date": 1689141600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 59,
+    "date": 1689141600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1689141600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1689228000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 50,
+    "date": 1689228000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 64,
+    "date": 1689228000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1689228000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1689314400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 31,
+    "date": 1689314400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 40,
+    "date": 1689314400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1689314400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1689400800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 71,
+    "date": 1689400800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 74,
+    "date": 1689400800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1689400800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1689487200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 59,
+    "date": 1689487200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 85,
+    "date": 1689487200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1689487200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1689573600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 110,
+    "date": 1689573600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 64,
+    "date": 1689573600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1689573600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1689660000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 32,
+    "date": 1689660000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 108,
+    "date": 1689660000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1689660000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1689746400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 67,
+    "date": 1689746400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 57,
+    "date": 1689746400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1689746400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1689832800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 102,
+    "date": 1689832800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 86,
+    "date": 1689832800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 28,
+    "date": 1689832800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1689919200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 94,
+    "date": 1689919200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1689919200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1689919200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690005600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 42,
+    "date": 1690005600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 99,
+    "date": 1690005600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1690005600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690092000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 88,
+    "date": 1690092000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 66,
+    "date": 1690092000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 36,
+    "date": 1690092000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690178400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 40,
+    "date": 1690178400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 100,
+    "date": 1690178400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1690178400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690264800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 74,
+    "date": 1690264800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 73,
+    "date": 1690264800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1690264800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690351200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 100,
+    "date": 1690351200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 87,
+    "date": 1690351200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1690351200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1690437600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 37,
+    "date": 1690437600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 63,
+    "date": 1690437600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1690437600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690524000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 42,
+    "date": 1690524000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1690524000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1690524000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690610400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 120,
+    "date": 1690610400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 51,
+    "date": 1690610400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1690610400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690696800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 99,
+    "date": 1690696800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1690696800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 22,
+    "date": 1690696800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1690783200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 67,
+    "date": 1690783200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 88,
+    "date": 1690783200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1690783200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1690869600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 107,
+    "date": 1690869600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 105,
+    "date": 1690869600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1690869600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1690956000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1690956000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 111,
+    "date": 1690956000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1690956000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1691042400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 76,
+    "date": 1691042400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 47,
+    "date": 1691042400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1691042400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1691128800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 88,
+    "date": 1691128800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 90,
+    "date": 1691128800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1691128800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1691215200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 109,
+    "date": 1691215200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 55,
+    "date": 1691215200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 24,
+    "date": 1691215200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1691301600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 32,
+    "date": 1691301600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 79,
+    "date": 1691301600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1691301600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1691388000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 79,
+    "date": 1691388000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 112,
+    "date": 1691388000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 24,
+    "date": 1691388000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1691474400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1691474400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 65,
+    "date": 1691474400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1691474400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1691560800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 90,
+    "date": 1691560800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 118,
+    "date": 1691560800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1691560800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1691647200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 102,
+    "date": 1691647200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 110,
+    "date": 1691647200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1691647200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1691733600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 106,
+    "date": 1691733600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 116,
+    "date": 1691733600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1691733600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1691820000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 71,
+    "date": 1691820000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 81,
+    "date": 1691820000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1691820000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1691906400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 44,
+    "date": 1691906400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 94,
+    "date": 1691906400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1691906400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1691992800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1691992800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 45,
+    "date": 1691992800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1691992800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1692079200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 108,
+    "date": 1692079200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1692079200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1692079200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692165600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 109,
+    "date": 1692165600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 77,
+    "date": 1692165600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1692165600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692252000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 86,
+    "date": 1692252000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 34,
+    "date": 1692252000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1692252000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692338400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 61,
+    "date": 1692338400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 45,
+    "date": 1692338400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 30,
+    "date": 1692338400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692424800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 44,
+    "date": 1692424800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 103,
+    "date": 1692424800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1692424800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692511200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 53,
+    "date": 1692511200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 81,
+    "date": 1692511200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1692511200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1692597600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 88,
+    "date": 1692597600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 38,
+    "date": 1692597600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1692597600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692684000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 119,
+    "date": 1692684000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 115,
+    "date": 1692684000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1692684000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1692770400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 110,
+    "date": 1692770400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 73,
+    "date": 1692770400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1692770400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1692856800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 31,
+    "date": 1692856800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 80,
+    "date": 1692856800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1692856800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1692943200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 99,
+    "date": 1692943200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 90,
+    "date": 1692943200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1692943200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693029600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 112,
+    "date": 1693029600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 84,
+    "date": 1693029600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1693029600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693116000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 54,
+    "date": 1693116000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 118,
+    "date": 1693116000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1693116000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1693202400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 96,
+    "date": 1693202400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 31,
+    "date": 1693202400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 29,
+    "date": 1693202400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693288800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 102,
+    "date": 1693288800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 36,
+    "date": 1693288800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1693288800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693375200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 98,
+    "date": 1693375200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 116,
+    "date": 1693375200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1693375200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693461600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 102,
+    "date": 1693461600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 113,
+    "date": 1693461600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1693461600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693548000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1693548000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 113,
+    "date": 1693548000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1693548000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1693634400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 86,
+    "date": 1693634400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 104,
+    "date": 1693634400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 35,
+    "date": 1693634400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1693720800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 93,
+    "date": 1693720800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 113,
+    "date": 1693720800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 36,
+    "date": 1693720800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1693807200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 33,
+    "date": 1693807200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 100,
+    "date": 1693807200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1693807200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1693893600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 50,
+    "date": 1693893600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 95,
+    "date": 1693893600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 27,
+    "date": 1693893600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1693980000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 79,
+    "date": 1693980000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 100,
+    "date": 1693980000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 31,
+    "date": 1693980000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1694066400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 104,
+    "date": 1694066400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 70,
+    "date": 1694066400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1694066400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1694152800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 101,
+    "date": 1694152800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 93,
+    "date": 1694152800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1694152800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1694239200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 115,
+    "date": 1694239200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 112,
+    "date": 1694239200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 26,
+    "date": 1694239200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1694325600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 97,
+    "date": 1694325600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 57,
+    "date": 1694325600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 23,
+    "date": 1694325600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1694412000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 62,
+    "date": 1694412000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 114,
+    "date": 1694412000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 37,
+    "date": 1694412000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1694498400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 60,
+    "date": 1694498400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 39,
+    "date": 1694498400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1694498400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1694584800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 70,
+    "date": 1694584800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 76,
+    "date": 1694584800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1694584800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1694671200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 64,
+    "date": 1694671200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 109,
+    "date": 1694671200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1694671200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1694757600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 64,
+    "date": 1694757600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 95,
+    "date": 1694757600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 38,
+    "date": 1694757600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1694844000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 97,
+    "date": 1694844000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 67,
+    "date": 1694844000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1694844000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1694930400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 42,
+    "date": 1694930400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 87,
+    "date": 1694930400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1694930400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1695016800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 76,
+    "date": 1695016800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 115,
+    "date": 1695016800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 21,
+    "date": 1695016800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695103200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 39,
+    "date": 1695103200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 106,
+    "date": 1695103200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 34,
+    "date": 1695103200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695189600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 67,
+    "date": 1695189600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 89,
+    "date": 1695189600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 22,
+    "date": 1695189600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695276000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 85,
+    "date": 1695276000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 88,
+    "date": 1695276000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 25,
+    "date": 1695276000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695362400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 111,
+    "date": 1695362400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 42,
+    "date": 1695362400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 24,
+    "date": 1695362400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1695448800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 108,
+    "date": 1695448800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 107,
+    "date": 1695448800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 40,
+    "date": 1695448800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695535200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 92,
+    "date": 1695535200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 110,
+    "date": 1695535200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1695535200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1695621600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 64,
+    "date": 1695621600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 47,
+    "date": 1695621600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 20,
+    "date": 1695621600
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695708000
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 39,
+    "date": 1695708000
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 85,
+    "date": 1695708000
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1695708000
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 2,
+    "date": 1695794400
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 93,
+    "date": 1695794400
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 93,
+    "date": 1695794400
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 33,
+    "date": 1695794400
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1695880800
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 39,
+    "date": 1695880800
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 41,
+    "date": 1695880800
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 39,
+    "date": 1695880800
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1695967200
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 81,
+    "date": 1695967200
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 102,
+    "date": 1695967200
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 28,
+    "date": 1695967200
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "trainingItemId": 1,
+    "record": 1,
+    "date": 1696053600
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "trainingItemId": 2,
+    "record": 116,
+    "date": 1696053600
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "trainingItemId": 3,
+    "record": 105,
+    "date": 1696053600
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "trainingItemId": 4,
+    "record": 32,
+    "date": 1696053600
+  }
+]
