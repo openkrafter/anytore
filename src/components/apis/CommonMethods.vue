@@ -1,13 +1,29 @@
 <script>
 import logger from '@/logger'
+import { useUserStore } from '@/stores/user'
 
 export async function requestApi(path, requestData) {
+  const store = useUserStore()
   try {
     var response
     if (requestData == null) {
-      response = await fetch(path)
+      var headers = new Headers()
+      headers.append('Authorization', 'Bearer ' + store.user.id)
+
+      const request = new Request(path, {
+        method: 'GET',
+        headers: headers,
+      })
+
+      response = await fetch(request)
     } else {
-      response = await fetch(path, requestData)
+      var headers = new Headers(requestData.headers)
+      headers.append('Authorization', 'Bearer ' + store.user.id)
+      requestData.headers = headers
+
+      const request = new Request(path, requestData)
+
+      response = await fetch(request)
     }
     if (!response.ok) {
       throw new Error('Error: Bad fetch response', response)
@@ -15,7 +31,6 @@ export async function requestApi(path, requestData) {
   } catch (error) {
     logger.error(error)
     logger.error('Error: API request failed.')
-    // throw error
   }
 
   return await response.json()

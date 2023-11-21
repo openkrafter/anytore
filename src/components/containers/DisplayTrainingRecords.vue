@@ -2,8 +2,6 @@
 import logger from '@/logger'
 import BarChart from '@/components/basics/BarChart.vue'
 import LineChart from '@/components/basics/LineChart.vue'
-import { mapStores } from 'pinia'
-import { useUserStore } from '@/stores/user'
 import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
 import { listTrainingRecords } from '@/components/apis/TrainingRecord.vue'
 import { displayedUnitName } from '@/components/containers/CommonMethods.vue'
@@ -45,8 +43,6 @@ export default {
   },
 
   computed: {
-    ...mapStores(useUserStore),
-
     displayedDate: function () {
       var displayedDateString = this.inputDate + ' 23:59:59'
       return new Date(displayedDateString)

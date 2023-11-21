@@ -8,11 +8,11 @@ export default defineComponent({
     console.log("start App")
 
     // mock test
-    testGetApi('/training-items')
-    testGetApi('/training-items/2')
-    testPostApi('/training-items', { id: 3, name: 'posttest' })
-    testPutApi('/training-items/4', { id: 4, name: 'puttest' })
-    testDeleteApi('/training-items/5')
+    // testGetApi('/training-items')
+    // testGetApi('/training-items/2')
+    // testPostApi('/training-items', { id: 3, name: 'posttest' })
+    // testPutApi('/training-items/4', { id: 4, name: 'puttest' })
+    // testDeleteApi('/training-items/5')
 
     return { }
   },
