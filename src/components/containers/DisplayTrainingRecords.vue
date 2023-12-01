@@ -71,11 +71,11 @@ export default {
     initDisplayedDate() {
       var currentTime = new Date()
       this.inputDate =
-        currentTime.getFullYear() +
+        ('0000' + currentTime.getFullYear()).slice(-4) +
         '-' +
-        (currentTime.getMonth() + 1) +
+        ('00' + (currentTime.getMonth() + 1)).slice(-2) +
         '-' +
-        currentTime.getDate()
+        ('00' + currentTime.getDate()).slice(-2)
     },
 
     changeDisplayCondition() {
@@ -155,24 +155,18 @@ export default {
     },
 
     createDailyTrainingRecordsForChart(trainingItem) {
-      var trainingFirstDate = new Date(
-        this.filteredTrainingRecords[0].date * 1000
-      )
-      var trainingLastDate = new Date(
-        this.filteredTrainingRecords.slice(-1)[0].date * 1000
-      )
+      var firstTrainingDate = new Date(this.trainingRecords[0].date * 1000)
 
-      var initFirstDate = new Date(trainingFirstDate)
-      initFirstDate.setDate(trainingFirstDate.getDate() - 14)
-
-      var initLastDate = new Date(this.inputDate + ' 23:59:59')
+      var firstInitDate = new Date(firstTrainingDate)
+      firstInitDate.setDate(firstTrainingDate.getDate() - 14)
+      var lastInitDate = new Date(this.inputDate + ' 23:59:59')
 
       // zero init
       var dailyTrainingRecordsForChart = {}
       var delta = 86400 * 1000 // 1 day unix time
       for (
-        var dateTimeStamp = initFirstDate.getTime();
-        dateTimeStamp < initLastDate.getTime();
+        var dateTimeStamp = firstInitDate.getTime();
+        dateTimeStamp < lastInitDate.getTime();
         dateTimeStamp += delta
       ) {
         var dateKey = new Date(dateTimeStamp)
@@ -185,8 +179,7 @@ export default {
 
       var displayedDateFilteredTrainingRecords = this.trainingRecords.filter(
         (trainingRecord) => {
-          var displayedDate = new Date(this.inputDate + ' 23:59:59')
-          return trainingRecord.date * 1000 < displayedDate.getTime()
+          return trainingRecord.date * 1000 < lastInitDate.getTime()
         }
       )
 
@@ -212,53 +205,30 @@ export default {
     createWeeklyChartInputData(trainingItem) {
       var chartInputData = this.initChartInputData(trainingItem)
 
-      var firstTrainingDate = new Date(
-        this.filteredTrainingRecords[0].date * 1000
-      )
-      var beforeMonday = this.getBeforeMonday(firstTrainingDate)
-      var nextMonday = new Date(beforeMonday)
-      nextMonday.setDate(beforeMonday.getDate() + 7)
+      var weeklyTrainingRecordsForChart =
+        this.createWeeklyTrainingRecordsForChart(trainingItem)
 
-      var weeklyTrainingRecords = {}
-      this.filteredTrainingRecords.forEach((trainingRecord) => {
-        if (trainingItem.id === trainingRecord.trainingItemId) {
-          var trainingDate = new Date(trainingRecord.date * 1000)
+      var sortedWeeklyTrainingRecordsForChartKeys = Object.keys(
+        weeklyTrainingRecordsForChart
+      ).sort(this.compareStringNumber)
 
-          if (nextMonday <= trainingDate.getTime()) {
-            beforeMonday = nextMonday
-            nextMonday = new Date(beforeMonday)
-            nextMonday.setDate(beforeMonday.getDate() + 7)
-            return
-          }
+      sortedWeeklyTrainingRecordsForChartKeys.forEach((chartDateKey) => {
+        var year = chartDateKey.substring(0, 4)
+        var month = chartDateKey.substring(4, 6)
+        var date = chartDateKey.substring(6, 8)
+        var dateLabel = year + '/' + month + '/' + date + ' 週'
 
-          if (weeklyTrainingRecords[beforeMonday.getTime()] === undefined) {
-            weeklyTrainingRecords[beforeMonday.getTime()] = [
-              trainingRecord.record,
-            ]
-          } else {
-            weeklyTrainingRecords[beforeMonday.getTime()].push(
-              trainingRecord.record
-            )
-          }
-        }
-      })
-
-      var sortedWeeklyTrainingRecords = Object.keys(
-        weeklyTrainingRecords
-      ).sort()
-      sortedWeeklyTrainingRecords.forEach((beforeMondayTimeStamp) => {
         var weeklyAverage = this.calculateAverage(
-          weeklyTrainingRecords[beforeMondayTimeStamp]
+          weeklyTrainingRecordsForChart[chartDateKey]
         )
 
-        var labelDate = new Date()
-        labelDate.setTime(beforeMondayTimeStamp)
-        var dateLabel = labelDate.toLocaleDateString('ja-JP') + ' 週'
         var calorieLabel =
           '合計' +
-          trainingItem.kcal *
-            weeklyAverage *
-            weeklyTrainingRecords[beforeMondayTimeStamp].length +
+          parseInt(
+            trainingItem.kcal *
+              weeklyAverage *
+              weeklyTrainingRecordsForChart[chartDateKey].length
+          ) +
           ' kcal'
 
         chartInputData.labels.push([dateLabel, calorieLabel])
@@ -266,6 +236,67 @@ export default {
       })
 
       return chartInputData
+    },
+
+    createWeeklyTrainingRecordsForChart(trainingItem) {
+      var firstTrainingDate = new Date(this.trainingRecords[0].date * 1000)
+      var beforeMonday = this.getBeforeMonday(firstTrainingDate)
+      var nextMonday = this.getNextMonday(beforeMonday)
+
+      var firstInitDate = new Date(beforeMonday)
+      var lastInitDate = new Date(this.inputDate + ' 23:59:59')
+
+      // zero init
+      var weeklyTrainingRecordsForChart = {}
+      var delta = 86400 * 1000 * 7 // 7 day unix time
+      for (
+        var dateTimeStamp = firstInitDate.getTime();
+        dateTimeStamp < lastInitDate.getTime();
+        dateTimeStamp += delta
+      ) {
+        var dateKey = new Date(dateTimeStamp)
+        var key =
+          ('0000' + dateKey.getFullYear()).slice(-4) +
+          ('00' + (dateKey.getMonth() + 1)).slice(-2) +
+          ('00' + dateKey.getDate()).slice(-2)
+        weeklyTrainingRecordsForChart[key] = [0.0]
+      }
+
+      var displayedDateFilteredTrainingRecords = this.trainingRecords.filter(
+        (trainingRecord) => {
+          return trainingRecord.date * 1000 < lastInitDate.getTime()
+        }
+      )
+
+      displayedDateFilteredTrainingRecords.forEach((trainingRecord) => {
+        if (trainingItem.id === trainingRecord.trainingItemId) {
+          var trainingDate = new Date(trainingRecord.date * 1000)
+
+          if (nextMonday.getTime() <= trainingDate.getTime()) {
+            beforeMonday = nextMonday
+            nextMonday = this.getNextMonday(beforeMonday)
+          }
+
+          var beforeMondayKey =
+            ('0000' + beforeMonday.getFullYear()).slice(-4) +
+            ('00' + (beforeMonday.getMonth() + 1)).slice(-2) +
+            ('00' + beforeMonday.getDate()).slice(-2)
+
+          if (
+            weeklyTrainingRecordsForChart[beforeMondayKey].length === 1 &&
+            weeklyTrainingRecordsForChart[beforeMondayKey][0] === 0
+          ) {
+            weeklyTrainingRecordsForChart[beforeMondayKey][0] =
+              trainingRecord.record
+          } else {
+            weeklyTrainingRecordsForChart[beforeMondayKey].push(
+              trainingRecord.record
+            )
+          }
+        }
+      })
+
+      return weeklyTrainingRecordsForChart
     },
 
     getBeforeMonday(date) {
@@ -277,6 +308,17 @@ export default {
       var beforeMonday = new Date(date)
       beforeMonday.setDate(date.getDate() + delta)
       return beforeMonday
+    },
+
+    getNextMonday(date) {
+      var delta = 8 - date.getDay()
+      if (date.getDay() === 0) {
+        delta = 1
+      }
+
+      var nextMonday = new Date(date)
+      nextMonday.setDate(date.getDate() + delta)
+      return nextMonday
     },
 
     calculateAverage(array) {
