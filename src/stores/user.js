@@ -4,10 +4,11 @@ import { User } from '@/components/models/User.vue'
 export const useUserStore = defineStore('user', {
   state: () => {
     return {
-      user: new User(1, 'test-user'),
-      // TODO: あとで戻す
-      // user: new User(),
+      user: new User(),
     }
+  },
+  persist: {
+    storage: localStorage,
   },
 
   actions: {

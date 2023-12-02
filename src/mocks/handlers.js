@@ -1,6 +1,7 @@
 import { rest } from 'msw'
 import mockTrainingItems from './resolvers/training-items'
 import mockTrainingRecords from './resolvers/training-records'
+import mockUsers from './resolvers/users'
 
 export const handlers = [
   // for msw GET /vite.svg
@@ -36,4 +37,8 @@ export const handlers = [
     '/training-records/:trainingRecordId',
     mockTrainingRecords.deleteTraningRecord
   ),
+
+  // User API
+  rest.get('/users', mockUsers.listUsers),
+  rest.post('/users', mockUsers.createUser),
 ]
