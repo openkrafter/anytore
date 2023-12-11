@@ -102,7 +102,7 @@ export default {
     </div>
   </div>
   <div class="ml-4">
-    <LightBlueButton @click="loginUser" class="w-30"> Login </LightBlueButton>
+    <LightBlueButton @click="loginUser"> Login </LightBlueButton>
   </div>
 
   <h2 class="text-2xl mt-10">ユーザ登録</h2>
