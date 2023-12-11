@@ -307,6 +307,7 @@ export default {
 
       var beforeMonday = new Date(date)
       beforeMonday.setDate(date.getDate() + delta)
+      beforeMonday.setHours(0, 0, 0, 0)
       return beforeMonday
     },
 
@@ -332,9 +333,115 @@ export default {
     createMonthlyChartInputData(trainingItem) {
       var chartInputData = this.initChartInputData(trainingItem)
 
-      // TODO
+      var monthlyTrainingRecordsForChart =
+        this.createMonthlyTrainingRecordsForChart(trainingItem)
+
+      var sortedMonthlyTrainingRecordsForChartKeys = Object.keys(
+        monthlyTrainingRecordsForChart
+      ).sort(this.compareStringNumber)
+
+      sortedMonthlyTrainingRecordsForChartKeys.forEach((chartDateKey) => {
+        var year = chartDateKey.substring(0, 4)
+        var month = chartDateKey.substring(4, 6)
+        var dateLabel = year + '/' + month + ' 月'
+
+        var monthlyAverage = this.calculateAverage(
+          monthlyTrainingRecordsForChart[chartDateKey]
+        )
+
+        var calorieLabel =
+          '合計' +
+          parseInt(
+            trainingItem.kcal *
+              monthlyAverage *
+              monthlyTrainingRecordsForChart[chartDateKey].length
+          ) +
+          ' kcal'
+
+        chartInputData.labels.push([dateLabel, calorieLabel])
+        chartInputData.datasets[0].data.push(monthlyAverage)
+      })
 
       return chartInputData
+    },
+
+    createMonthlyTrainingRecordsForChart(trainingItem) {
+      var firstTrainingDate = new Date(this.trainingRecords[0].date * 1000)
+      var firstDayOfCurrentMonth =
+        this.getFirstDayOfCurrentMonth(firstTrainingDate)
+      var firstDayOfNextMonth = this.getFirstDayOfNextMonth(
+        firstDayOfCurrentMonth
+      )
+
+      var firstInitDate = new Date(firstDayOfCurrentMonth)
+      var lastInitDate = new Date(this.inputDate + ' 23:59:59')
+
+      // zero init
+      var monthlyTrainingRecordsForChart = {}
+      for (
+        ;
+        firstInitDate.getTime() < lastInitDate.getTime();
+        firstInitDate = this.getFirstDayOfNextMonth(firstInitDate)
+      ) {
+        var key =
+          ('0000' + firstInitDate.getFullYear()).slice(-4) +
+          ('00' + (firstInitDate.getMonth() + 1)).slice(-2) +
+          ('00' + firstInitDate.getDate()).slice(-2)
+        monthlyTrainingRecordsForChart[key] = [0.0]
+      }
+
+      var displayedDateFilteredTrainingRecords = this.trainingRecords.filter(
+        (trainingRecord) => {
+          return trainingRecord.date * 1000 < lastInitDate.getTime()
+        }
+      )
+
+      displayedDateFilteredTrainingRecords.forEach((trainingRecord) => {
+        if (trainingItem.id === trainingRecord.trainingItemId) {
+          var trainingDate = new Date(trainingRecord.date * 1000)
+
+          if (firstDayOfNextMonth.getTime() <= trainingDate.getTime()) {
+            firstDayOfCurrentMonth = firstDayOfNextMonth
+            firstDayOfNextMonth = this.getFirstDayOfNextMonth(
+              firstDayOfCurrentMonth
+            )
+          }
+
+          var firstDayOfCurrentMonthKey =
+            ('0000' + firstDayOfCurrentMonth.getFullYear()).slice(-4) +
+            ('00' + (firstDayOfCurrentMonth.getMonth() + 1)).slice(-2) +
+            ('00' + firstDayOfCurrentMonth.getDate()).slice(-2)
+
+          if (
+            monthlyTrainingRecordsForChart[firstDayOfCurrentMonthKey].length ===
+              1 &&
+            monthlyTrainingRecordsForChart[firstDayOfCurrentMonthKey][0] === 0
+          ) {
+            monthlyTrainingRecordsForChart[firstDayOfCurrentMonthKey][0] =
+              trainingRecord.record
+          } else {
+            monthlyTrainingRecordsForChart[firstDayOfCurrentMonthKey].push(
+              trainingRecord.record
+            )
+          }
+        }
+      })
+
+      return monthlyTrainingRecordsForChart
+    },
+
+    getFirstDayOfCurrentMonth(date) {
+      var firstDayOfCurrentMonth = new Date(date)
+      firstDayOfCurrentMonth.setDate(1)
+      firstDayOfCurrentMonth.setHours(0, 0, 0, 0)
+      return firstDayOfCurrentMonth
+    },
+
+    getFirstDayOfNextMonth(date) {
+      var firstDayOfNextMonth = new Date(date)
+      firstDayOfNextMonth.setMonth(firstDayOfNextMonth.getMonth() + 1)
+      firstDayOfNextMonth.setDate(1)
+      return firstDayOfNextMonth
     },
 
     initChartInputData(trainingItem) {

@@ -28,7 +28,6 @@ export default {
     closeModal() {
       this.modal.hide()
     },
-
   },
 }
 </script>
@@ -37,9 +36,7 @@ export default {
   <div class="m-4">
     <div class="flex justify-between">
       <h1 class="text-4xl">あなたのトレーニング</h1>
-      <LightBlueButton
-        @click="addTrainingItem('add-training-item-modal')"
-      >
+      <LightBlueButton @click="addTrainingItem('add-training-item-modal')">
         追加
       </LightBlueButton>
 
@@ -50,7 +47,7 @@ export default {
         aria-hidden="true"
         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <UpdateTrainingItem @close-modal="closeModal()"/>
+        <UpdateTrainingItem @close-modal="closeModal()" />
       </div>
     </div>
     <div class="mt-4 ml-4">
