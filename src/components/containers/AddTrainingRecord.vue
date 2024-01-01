@@ -49,6 +49,10 @@ export default {
     addTrainingRecord() {
       logger.trace('add training record!')
 
+      if (this.userStore.user.id === undefined)
+        return alert(
+          '※ 未ログイン：「ユーザ選択」メニューでログインしてください'
+        )
       if (this.selectedTrainingItemIndex === '')
         return alert('トレーニング項目を選択してください')
       if (this.trainingRecordInput <= 0)
