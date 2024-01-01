@@ -1,8 +1,13 @@
 <script lang="js">
+import Header from '@/components/containers/Header.vue'
 import { reactive, defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   name: 'App',
+
+  components: {
+    Header,
+  },
 
   setup() {
     console.log("start App")
@@ -62,6 +67,7 @@ function testDeleteApi(path) {
 </script>
 
 <template>
+  <Header />
   <div>
     <router-view />
   </div>
