@@ -6,11 +6,11 @@ const listUsers = (req, res, ctx) => {
     ctx.json([
       {
         id: 1,
-        name: 'muranaka',
+        name: 'user1',
       },
       {
         id: 2,
-        name: 'やまだ',
+        name: 'user2',
       },
     ])
   )
