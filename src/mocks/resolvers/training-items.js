@@ -70,7 +70,7 @@ const updateTraningItem = async (req, res, ctx) => {
 const deleteTraningItem = (req, res, ctx) => {
   logger.trace('deleteTraningItem API Authorization Header')
   logger.trace(req.headers.get('authorization'))
-  return res(ctx.status(200), ctx.json({}))
+  return res(ctx.status(200), ctx.json())
 }
 
 const mockTrainingItems = {

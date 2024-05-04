@@ -167,17 +167,14 @@ export async function deleteTrainingItem(trainingItemId) {
   // null check
   if (
     trainingItemId == null ||
-    trainingItemId == '' ||
-    trainingItem.userId == null ||
-    trainingItem.userId == ''
+    trainingItemId == ''
   ) {
     logger.error('Error: Invalid value of trainingItem.')
   }
 
   // type check
   if (
-    typeof trainingItemId !== 'number' ||
-    typeof trainingItem.userId !== 'number'
+    typeof trainingItemId !== 'number'
   ) {
     logger.error('Error: Invalid type of trainingItem.')
   }

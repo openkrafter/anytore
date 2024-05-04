@@ -1,5 +1,4 @@
 import logger from '@/logger'
-// import { rest } from 'msw'
 import trainingRecords from './sampledata/TrainingRecords.json'
 
 const listTraningRecord = (req, res, ctx) => {
@@ -32,7 +31,7 @@ const updateTraningRecord = async (req, res, ctx) => {
 }
 
 const deleteTraningRecord = (req, res, ctx) => {
-  return res(ctx.status(200), ctx.json({}))
+  return res(ctx.status(200), ctx.json())
 }
 
 const mockTrainingRecords = {

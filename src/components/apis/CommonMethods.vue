@@ -3,6 +3,12 @@ import logger from '@/logger'
 import { useUserStore } from '@/stores/user'
 
 export async function requestApi(path, requestData) {
+  var backendServerDomain = ''
+  if (import.meta.env.ANYTORE_BACKEND_SERVER !== undefined) {
+    backendServerDomain = import.meta.env.ANYTORE_BACKEND_SERVER
+  }
+  const requestPath = backendServerDomain + path
+
   const store = useUserStore()
   try {
     var response
@@ -10,7 +16,7 @@ export async function requestApi(path, requestData) {
       var headers = new Headers()
       headers.append('Authorization', 'Bearer ' + store.user.id)
 
-      const request = new Request(path, {
+      const request = new Request(requestPath, {
         method: 'GET',
         headers: headers,
       })
@@ -21,7 +27,7 @@ export async function requestApi(path, requestData) {
       headers.append('Authorization', 'Bearer ' + store.user.id)
       requestData.headers = headers
 
-      const request = new Request(path, requestData)
+      const request = new Request(requestPath, requestData)
 
       response = await fetch(request)
     }
@@ -33,6 +39,9 @@ export async function requestApi(path, requestData) {
     logger.error('Error: API request failed.')
   }
 
+  if ((await response.clone().text()).length === 0) {
+    return null
+  }
   return await response.json()
 }
 </script>
