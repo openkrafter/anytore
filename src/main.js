@@ -7,8 +7,12 @@ import router from '@/router'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { worker } from './mocks/browser'
+import axios from 'axios'
 
 logger.info('start app')
+
+axios.defaults.baseURL = import.meta.env.ANYTORE_BACKEND_SERVER
+axios.defaults.timeout = 1000
 
 if (process.env.NODE_ENV === 'development') {
   worker.start()

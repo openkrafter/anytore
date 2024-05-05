@@ -55,7 +55,7 @@ export default {
         </li>
         <li class="border-b md:border-none text-gray-200">
           <router-link
-            to="/login"
+            to="/select-user"
             class="block px-6 mb-4 hover:bg-gray-600 rounded"
             >ユーザ選択</router-link
           >

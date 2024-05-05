@@ -1,80 +1,41 @@
 <script lang="js">
-import Header from '@/components/containers/Header.vue'
 import { reactive, defineComponent, onMounted } from 'vue'
+import LoginHeader from './components/containers/LoginHeader.vue'
+import AdminHeader from './components/containers/AdminHeader.vue'
+import UserHeader from '@/components/containers/UserHeader.vue'
 
 export default defineComponent({
   name: 'App',
 
   components: {
-    Header,
+    LoginHeader,
+    AdminHeader,
+    UserHeader,
+  },
+  computed: {
+    isLoginHeader() {
+      return this.$route.meta.headerType === 'login'
+    },
+    isAdminHeader() {
+      return this.$route.meta.headerType === 'admin'
+    },
+    isUserHeader() {
+      return this.$route.meta.headerType === 'user'
+    },
   },
 
   setup() {
     console.log("start App")
-
-    // mock test
-    // testGetApi('/training-items')
-    // testGetApi('/training-items/2')
-    // testPostApi('/training-items', { id: 3, name: 'posttest' })
-    // testPutApi('/training-items/4', { id: 4, name: 'puttest' })
-    // testDeleteApi('/training-items/5')
-
     return { }
   },
 })
-
-function testGetApi(path) {
-  onMounted(async () => {
-    const response = await fetch(path)
-    const results = await response.json()
-  })
-}
-
-function testPostApi(path, data) {
-  onMounted(async () => {
-    const response = await fetch(path, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data),
-    })
-    const results = await response.json()
-  })
-}
-
-function testPutApi(path, data) {
-  onMounted(async () => {
-    const response = await fetch(path, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data),
-    })
-    const results = await response.json()
-  })
-}
-
-function testDeleteApi(path) {
-  onMounted(async () => {
-    const response = await fetch(path, {
-      method: 'DELETE',
-    })
-    const results = await response.json()
-  })
-}
 </script>
 
 <template>
-  <Header />
+  <LoginHeader v-if="isLoginHeader" />
+  <AdminHeader v-if="isAdminHeader" />
+  <UserHeader v-if="isUserHeader" />
   <div>
     <router-view />
   </div>
 </template>
-
-<style>
-body {
-  /* background-color: #eee; */
-}
-</style>

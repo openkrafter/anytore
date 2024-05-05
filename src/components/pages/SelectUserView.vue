@@ -1,9 +1,9 @@
 <script>
-import DisplayUsers from '@/components/containers/DisplayUsers.vue'
+import DisplayLocalUsers from '@/components/containers/DisplayLocalUsers.vue'
 
 export default {
   components: {
-    DisplayUsers,
+    DisplayLocalUsers,
   },
 }
 </script>
@@ -14,7 +14,7 @@ export default {
       <h1 class="text-4xl">ユーザ選択・登録画面</h1>
     </div>
     <div class="mt-4 ml-4">
-      <DisplayUsers />
+      <DisplayLocalUsers />
     </div>
   </div>
 </template>
