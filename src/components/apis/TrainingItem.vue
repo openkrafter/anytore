@@ -1,11 +1,15 @@
 <script>
 import { TrainingItem } from '@/components/models/TrainingItem.vue'
 import logger from '@/logger'
-import { requestApi } from '@/components/apis/CommonMethods.vue'
+import {
+  requestApi,
+  requestAuthApi,
+  HttpMethod,
+} from '@/components/apis/CommonMethods.vue'
 
 export async function listTrainingItems() {
   const path = '/training-items'
-  const trainingItemsResults = await requestApi(path)
+  const trainingItemsResults = await requestAuthApi(path, HttpMethod.GET)
 
   var trainingItems = []
   trainingItemsResults.forEach((trainingItemResult) => {
@@ -59,8 +63,6 @@ export async function createTrainingItem(trainingItem) {
 
   // null check
   if (
-    trainingItem.userId == null || // null or undefiend
-    trainingItem.userId == '' || // "" or 0
     trainingItem.name == null ||
     trainingItem.name == '' ||
     trainingItem.type == null ||
@@ -71,37 +73,30 @@ export async function createTrainingItem(trainingItem) {
     trainingItem.kcal == ''
   ) {
     logger.error('Error: Invalid value of trainingItem.')
+    throw new Error('Error: Invalid value of trainingItem.')
   }
 
   // type check
   if (
-    typeof trainingItem.userId !== 'number' ||
     typeof trainingItem.name !== 'string' ||
     typeof trainingItem.type !== 'string' ||
     typeof trainingItem.unit !== 'string' ||
     typeof trainingItem.kcal !== 'number'
   ) {
     logger.error('Error: Invalid type of trainingItem.')
+    throw new Error('Error: Invalid value of trainingItem.')
   }
 
   const path = '/training-items'
 
-  const requestBody = {
-    userId: trainingItem.userId,
+  const requestData = {
     name: trainingItem.name,
     type: trainingItem.type,
     unit: trainingItem.unit,
     kcal: trainingItem.kcal,
   }
 
-  const requestData = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(requestBody),
-  }
-  const results = await requestApi(path, requestData)
+  const result = await requestAuthApi(path, HttpMethod.POST, requestData)
 }
 
 export async function updateTrainingItem(trainingItem) {
@@ -112,8 +107,6 @@ export async function updateTrainingItem(trainingItem) {
   if (
     trainingItem.id == null ||
     trainingItem.id == '' ||
-    trainingItem.userId == null || // null or undefiend
-    trainingItem.userId == '' || // "" or 0
     trainingItem.name == null ||
     trainingItem.name == '' ||
     trainingItem.type == null ||
@@ -124,40 +117,31 @@ export async function updateTrainingItem(trainingItem) {
     trainingItem.kcal == ''
   ) {
     logger.error('Error: Invalid value of trainingItem.')
+    throw new Error('Error: Invalid value of trainingItem.')
   }
 
   // type check
   if (
     typeof trainingItem.id !== 'number' ||
-    typeof trainingItem.userId !== 'number' ||
     typeof trainingItem.name !== 'string' ||
     typeof trainingItem.type !== 'string' ||
     typeof trainingItem.unit !== 'string' ||
     typeof trainingItem.kcal !== 'number'
   ) {
     logger.error('Error: Invalid type of trainingItem.')
+    throw new Error('Error: Invalid value of trainingItem.')
   }
 
   const path = '/training-items/' + trainingItem.id
 
-  const requestBody = {
-    userId: trainingItem.userId,
+  const requestData = {
     name: trainingItem.name,
     type: trainingItem.type,
     unit: trainingItem.unit,
     kcal: trainingItem.kcal,
   }
 
-  logger.trace(requestBody)
-
-  const requestData = {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(requestBody),
-  }
-  const results = await requestApi(path, requestData)
+  const result = await requestAuthApi(path, HttpMethod.PUT, requestData)
 }
 
 export async function deleteTrainingItem(trainingItemId) {
@@ -165,25 +149,19 @@ export async function deleteTrainingItem(trainingItemId) {
   logger.trace(trainingItemId)
 
   // null check
-  if (
-    trainingItemId == null ||
-    trainingItemId == ''
-  ) {
+  if (trainingItemId == null || trainingItemId == '') {
     logger.error('Error: Invalid value of trainingItem.')
+    throw new Error('Error: Invalid value of trainingItem.')
   }
 
   // type check
-  if (
-    typeof trainingItemId !== 'number'
-  ) {
+  if (typeof trainingItemId !== 'number') {
     logger.error('Error: Invalid type of trainingItem.')
+    throw new Error('Error: Invalid value of trainingItem.')
   }
 
   const path = '/training-items/' + trainingItemId
 
-  const requestData = {
-    method: 'DELETE',
-  }
-  const results = await requestApi(path, requestData)
+  const result = await requestAuthApi(path, HttpMethod.DELETE)
 }
 </script>

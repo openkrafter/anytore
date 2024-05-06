@@ -4,8 +4,8 @@ import logger from '@/logger'
 import {
   requestApi,
   requestBasicAuthApi,
+  HttpMethod,
 } from '@/components/apis/CommonMethods.vue'
-import { HttpMethod } from '@/components/apis/CommonMethods.vue'
 
 export async function listUsers() {
   const path = '/admin/users'

@@ -1,14 +1,24 @@
 <script>
-import { useUserStore } from '@/stores/user'
-import { mapStores } from 'pinia'
+import { getAuthStore } from '@/stores/authStore'
+import { getUserStore } from '@/stores/userStore'
 
 export default {
+  data() {
+    return {
+      userStore: null,
+    }
+  },
   computed: {
-    ...mapStores(useUserStore),
-
     // getUserName returns the current user name
     getUserName() {
+      this.userStore = getUserStore()
       return this.userStore.user.name
+    },
+  },
+  methods: {
+    logout() {
+      const authStore = getAuthStore()
+      authStore.userLogout()
     },
   },
 }
@@ -54,10 +64,10 @@ export default {
           >
         </li>
         <li class="border-b md:border-none text-gray-200">
-          <router-link
-            to="/select-user"
+          <span
+            @click="logout"
             class="block px-6 mb-4 hover:bg-gray-600 rounded"
-            >ユーザ選択</router-link
+            >ログアウト</span
           >
         </li>
       </ul>

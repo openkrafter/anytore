@@ -13,8 +13,8 @@ export const useUserStore = defineStore('user', {
 
   actions: {
     setUser(user) {
-      this.user.id = user.id
       this.user.name = user.name
+      this.user.email = user.email
     },
   },
 })

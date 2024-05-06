@@ -31,7 +31,7 @@ export default {
   },
 
   methods: {
-    saveTrainingItem() {
+    async saveTrainingItem() {
       logger.trace('save training!')
       logger.trace(this.trainingItemInput)
 
@@ -49,22 +49,25 @@ export default {
       )
 
       if (this.trainingItemInput.id == null) {
-        createTrainingItem(trainingItem)
+        await createTrainingItem(trainingItem)
       } else {
         trainingItem.id = this.trainingItemInput.id
-        updateTrainingItem(trainingItem)
+        await updateTrainingItem(trainingItem)
       }
+      this.closeTrainingItemModal()
     },
 
-    deleteTrainingItem() {
+    async deleteTrainingItem() {
       logger.trace('delete training!')
       logger.trace(this.trainingItemInput)
-      deleteTrainingItem(this.trainingItemInput.id)
+      await deleteTrainingItem(this.trainingItemInput.id)
+      this.closeTrainingItemModal()
     },
 
     closeTrainingItemModal() {
       logger.trace('close modal')
       this.$emit('close-modal')
+      window.location.reload()
     },
   },
 }
