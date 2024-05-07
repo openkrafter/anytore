@@ -2,7 +2,6 @@
 import logger from '@/logger'
 import LightBlueButton from '@/components/basics/LightBlueButton.vue'
 import { mapActions, mapState } from 'pinia'
-import { useAuthStore } from '@/stores/auth'
 import {
   listUsers,
   createUser,
@@ -28,11 +27,7 @@ export default {
       editingUserId: null,
     }
   },
-  computed: {
-    ...mapState(useAuthStore, ['adminToken']),
-  },
   methods: {
-    ...mapActions(useAuthStore, ['adminLogout']),
     async fetchUsers() {
       this.users = await listUsers()
     },
@@ -82,11 +77,7 @@ export default {
     },
   },
   mounted() {
-    if (!this.adminToken) {
-      this.adminLogout()
-    } else {
-      this.fetchUsers()
-    }
+    this.fetchUsers()
   },
 }
 </script>

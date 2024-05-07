@@ -55,18 +55,3 @@ export default {
     </div>
   </div>
 </template>
-
-<style>
-body {
-  /*
-  background-color: #eee;
-*/
-}
-
-.training-item {
-  /*
-  background-color: white;
-  border-radius: 0.5em;
-  */
-}
-</style>

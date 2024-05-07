@@ -23,6 +23,13 @@ export const useAuthStore = defineStore('auth', {
       this.adminToken = null
       router.push('/admin-login')
     },
+    setUserToken(token) {
+      this.userToken = token
+    },
+    userLogout() {
+      this.userToken = null
+      router.push('/login')
+    },
   },
   persist: {
     storage: localStorage,
