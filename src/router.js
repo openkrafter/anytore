@@ -3,10 +3,8 @@ import { getAuthStore } from '@/stores/authStore'
 import AddTrainingRecordView from '@/components/pages/AddTrainingRecordView.vue'
 import DescribeRecordsView from '@/components/pages/DescribeRecordsView.vue'
 import DisplayRecordsView from '@/components/pages/DisplayRecordsView.vue'
-import SelectUserView from '@/components/pages/SelectUserView.vue'
 import UpdateTrainingItemView from '@/components/pages/UpdateTrainingItemView.vue'
 import AdminView from '@/components/pages/AdminView.vue'
-import AdminLoginView from '@/components/pages/AdminLoginView.vue'
 import UserLoginView from '@/components/pages/UserLoginView.vue'
 
 const routes = [
@@ -15,15 +13,6 @@ const routes = [
     component: UserLoginView,
     meta: { headerType: 'login' },
   },
-  // {
-  //   path: '/select-user',
-  //   name: 'SelectUserView',
-  //   component: SelectUserView,
-  //   meta: {
-  //     requireUserAuth: true,
-  //     headerType: 'user',
-  //   },
-  // },
   {
     path: '/display-records',
     name: 'DisplayRecordsView',
@@ -61,15 +50,10 @@ const routes = [
     },
   },
   {
-    path: '/admin-login',
-    component: AdminLoginView,
-    meta: { headerType: 'login' },
-  },
-  {
     path: '/admin',
     component: AdminView,
     meta: {
-      requireAdminAuth: true,
+      requireUserAuth: true,
       headerType: 'admin',
     },
   },
@@ -81,12 +65,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  // const authStore = useAuthStore()
   const authStore = getAuthStore()
   if (to.meta.requireUserAuth && !authStore.userToken) {
     next('/login')
-  } else if (to.meta.requireAdminAuth && !authStore.adminToken) {
-    next('/admin-login')
   } else if (to.path === '/') {
     next('/display-records')
   } else {

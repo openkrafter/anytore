@@ -3,13 +3,13 @@ import { User } from '@/components/models/User.vue'
 import logger from '@/logger'
 import {
   requestApi,
-  requestBasicAuthApi,
+  requestAuthApi,
   HttpMethod,
 } from '@/components/apis/CommonMethods.vue'
 
 export async function listUsers() {
   const path = '/admin/users'
-  const usersResults = await requestBasicAuthApi(path, HttpMethod.GET)
+  const usersResults = await requestAuthApi(path, HttpMethod.GET)
 
   var users = []
   usersResults.forEach((userResult) => {
@@ -74,7 +74,7 @@ export async function createUser(user) {
     password: user.password,
   }
 
-  const results = await requestBasicAuthApi(path, HttpMethod.POST, requestData)
+  const results = await requestAuthApi(path, HttpMethod.POST, requestData)
 }
 
 export async function updateUser(user) {
@@ -113,7 +113,7 @@ export async function updateUser(user) {
     password: user.password,
   }
 
-  const results = await requestBasicAuthApi(path, HttpMethod.PUT, requestData)
+  const results = await requestAuthApi(path, HttpMethod.PUT, requestData)
 }
 
 export async function deleteUser(userId) {
@@ -132,6 +132,6 @@ export async function deleteUser(userId) {
 
   const path = 'admin/users/' + userId
 
-  const results = await requestBasicAuthApi(path, HttpMethod.DELETE)
+  const results = await requestAuthApi(path, HttpMethod.DELETE)
 }
 </script>
