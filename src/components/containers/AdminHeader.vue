@@ -5,7 +5,7 @@ export default {
   methods: {
     logout() {
       const authStore = getAuthStore()
-      authStore.adminLogout()
+      authStore.userLogout()
     },
   },
 }
