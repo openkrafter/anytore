@@ -11,7 +11,7 @@ import axios from 'axios'
 
 logger.info('start app')
 
-axios.defaults.baseURL = import.meta.env.ANYTORE_BACKEND_SERVER
+axios.defaults.baseURL = import.meta.env.VITE_ANYTORE_BACKEND_SERVER
 axios.defaults.timeout = 1000
 
 if (process.env.NODE_ENV === 'development') {
