@@ -1,3 +1,5 @@
+import 'flowbite'
+import 'flowbite/dist/flowbite.min.css'
 import { createApp } from 'vue'
 import '@/style.css'
 import '@/index.css'

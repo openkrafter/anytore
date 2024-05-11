@@ -5,8 +5,8 @@ services:
     ports:
       - '8081:80'
     networks:
-      - anytore-external-net
+      - anytore-net
 
 networks:
-  anytore-external-net:
+  anytore-net:
     driver: bridge
