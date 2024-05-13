@@ -1,11 +1,7 @@
 <script>
 import { User } from '@/components/models/User.vue'
 import logger from '@/logger'
-import {
-  requestApi,
-  requestAuthApi,
-  HttpMethod,
-} from '@/components/apis/CommonMethods.vue'
+import { requestAuthApi, HttpMethod } from '@/components/apis/CommonMethods.vue'
 
 export async function listUsers() {
   const path = '/admin/users'

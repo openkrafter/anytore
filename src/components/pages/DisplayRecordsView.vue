@@ -1,12 +1,10 @@
 <script>
 import logger from '@/logger'
 import DisplayTrainingRecords from '@/components/containers/DisplayTrainingRecords.vue'
-import DisplayCompositionRecords from '@/components/containers/DisplayCompositionRecords.vue'
 
 export default {
   components: {
     DisplayTrainingRecords,
-    DisplayCompositionRecords,
   },
 
   data() {
@@ -24,10 +22,6 @@ export default {
     <div class="mt-4 ml-4">
       <div>
         <DisplayTrainingRecords />
-      </div>
-      <h2>体組成データの記録</h2>
-      <div>
-        <DisplayCompositionRecords />
       </div>
     </div>
   </div>

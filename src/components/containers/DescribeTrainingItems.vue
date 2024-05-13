@@ -3,7 +3,6 @@ import '@/components/containers/DescribeTrainingItems.css'
 import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
 import UpdateTrainingItem from '@/components/containers/UpdateTrainingItem.vue'
 import logger from '@/logger'
-import { Modal } from 'flowbite'
 import { openModal } from '@/components/containers/CommonMethods.vue'
 
 export default {

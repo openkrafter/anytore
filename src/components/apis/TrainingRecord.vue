@@ -1,11 +1,11 @@
 <script>
 import logger from '@/logger'
-import { requestApi } from '@/components/apis/CommonMethods.vue'
+import { HttpMethod, requestAuthApi } from '@/components/apis/CommonMethods.vue'
 import { TrainingRecord } from '@/components/models/TrainingRecord.vue'
 
 export async function listTrainingRecords() {
   const path = '/training-records'
-  const trainingRecordsResults = await requestApi(path)
+  const trainingRecordsResults = await requestAuthApi(path, HttpMethod.GET)
 
   var trainingRecords = []
   trainingRecordsResults.forEach((trainingRecordResult) => {
@@ -48,29 +48,41 @@ export async function listTrainingRecords() {
 }
 
 export async function createTrainingRecord(trainingRecord) {
-  // TODO validation
-
   logger.trace('createTrainingRecord')
   logger.trace(trainingRecord)
+
+  // null check
+  if (
+    trainingRecord.trainingItemId == null ||
+    trainingRecord.trainingItemId == '' ||
+    trainingRecord.record == null ||
+    trainingRecord.record == '' ||
+    trainingRecord.date == null ||
+    trainingRecord.date == ''
+  ) {
+    logger.error('Error: Invalid value of trainingRecord.')
+    throw new Error('Error: Invalid value of trainingRecord.')
+  }
+
+  // type check
+  if (
+    typeof trainingRecord.trainingItemId !== 'number' ||
+    typeof trainingRecord.record !== 'number' ||
+    typeof trainingRecord.date !== 'number'
+  ) {
+    logger.error('Error: Invalid type of trainingRecord.')
+    throw new Error('Error: Invalid value of trainingRecord.')
+  }
+
   const path = '/training-records'
 
-  const data = {
-    id: trainingRecord.id,
-    userId: trainingRecord.userId,
+  const requestData = {
     trainingItemId: trainingRecord.trainingItemId,
     record: trainingRecord.record,
     date: trainingRecord.date,
   }
 
-  const response = await fetch(path, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-  const results = await response.json()
-
+  const results = await requestAuthApi(path, HttpMethod.POST, requestData)
   logger.trace(results)
 }
 </script>

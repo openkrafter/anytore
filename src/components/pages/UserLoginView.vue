@@ -1,6 +1,4 @@
 <script>
-// import { useAuthStore } from '@/stores/auth'
-import { mapActions, mapState } from 'pinia'
 import LightBlueButton from '@/components/basics/LightBlueButton.vue'
 import router from '@/router'
 import { login } from '@/components/apis/Login.vue'
