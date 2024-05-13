@@ -53,7 +53,7 @@ export default {
           <router-link
             to="/add-training-record"
             class="block px-6 mb-4 hover:bg-gray-600 rounded"
-            >今日の頑張り</router-link
+            >頑張りを記録</router-link
           >
         </li>
         <li class="border-b md:border-none text-gray-200">

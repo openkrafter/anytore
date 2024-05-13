@@ -1,11 +1,7 @@
 <script>
 import { TrainingItem } from '@/components/models/TrainingItem.vue'
 import logger from '@/logger'
-import {
-  requestApi,
-  requestAuthApi,
-  HttpMethod,
-} from '@/components/apis/CommonMethods.vue'
+import { requestAuthApi, HttpMethod } from '@/components/apis/CommonMethods.vue'
 
 export async function listTrainingItems() {
   const path = '/training-items'

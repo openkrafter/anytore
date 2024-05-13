@@ -1,7 +1,6 @@
 <script>
 import logger from '@/logger'
 import LightBlueButton from '@/components/basics/LightBlueButton.vue'
-import { mapActions, mapState } from 'pinia'
 import {
   listUsers,
   createUser,

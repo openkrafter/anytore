@@ -1,6 +1,7 @@
 <script>
 import logger from '@/logger'
 import LightBlueButton from '@/components/basics/LightBlueButton.vue'
+import { listTrainingItems } from '@/components/apis/TrainingItem.vue'
 import { createTrainingRecord } from '@/components/apis/TrainingRecord.vue'
 import { TrainingRecord } from '@/components/models/TrainingRecord.vue'
 import { mapStores } from 'pinia'
@@ -16,6 +17,7 @@ export default {
       trainingItems: [],
       selectedTrainingItemIndex: '',
       trainingRecordInput: '0',
+      inputDate: '',
     }
   },
 
@@ -35,12 +37,23 @@ export default {
         }
       })
     },
+
+    trainingDate() {
+      const date = new Date(this.inputDate)
+      return Math.floor(date.getTime() / 1000)
+    },
   },
 
   async created() {
-    const path = '/training-items'
-    const response = await fetch(path)
-    const trainingItemsResults = await response.json()
+    var currentTime = new Date()
+    this.inputDate =
+      ('0000' + currentTime.getFullYear()).slice(-4) +
+      '-' +
+      ('00' + (currentTime.getMonth() + 1)).slice(-2) +
+      '-' +
+      ('00' + currentTime.getDate()).slice(-2)
+
+    const trainingItemsResults = await listTrainingItems()
     this.trainingItems.push(...trainingItemsResults)
     logger.trace(this.trainingItems)
   },
@@ -49,10 +62,6 @@ export default {
     addTrainingRecord() {
       logger.trace('add training record!')
 
-      if (this.userStore.user.id === undefined)
-        return alert(
-          '※ 未ログイン：「ユーザ選択」メニューでログインしてください'
-        )
       if (this.selectedTrainingItemIndex === '')
         return alert('トレーニング項目を選択してください')
       if (this.trainingRecordInput <= 0)
@@ -63,7 +72,7 @@ export default {
         this.userStore.user.id,
         this.trainingItems[this.selectedTrainingItemIndex].id,
         this.trainingRecordInput,
-        Date.now()
+        this.trainingDate
       )
       createTrainingRecord(trainingRecord)
     },
@@ -89,9 +98,19 @@ export default {
   </div>
 
   <h2 class="text-2xl mt-10">トレーニング実績の入力</h2>
-  <div class="mt-4">
+  <div class="mt-4 ml-4">
     <div v-if="selectedTrainingItemIndex === ''">(トレーニング項目を選択)</div>
     <div v-else>
+      <div class="mb-4">
+        <label for="training-date">トレーニング日時の選択</label>
+        <input
+          class="ml-5"
+          id="training-date"
+          type="date"
+          v-model="inputDate"
+        />
+      </div>
+
       <div class="inline-block">
         {{ trainingItemUnitName[selectedTrainingItemIndex] }}
       </div>

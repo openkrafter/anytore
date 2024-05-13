@@ -1,4 +1,3 @@
-<!-- TODO -->
 <script>
 import logger from '@/logger'
 
