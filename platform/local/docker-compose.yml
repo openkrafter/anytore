@@ -6,6 +6,9 @@ services:
       - '8081:80'
     networks:
       - anytore-net
+    restart: always
+    volumes:
+      - ./admin-htpasswd:/etc/nginx/.htpasswd
 
 networks:
   anytore-net:
