@@ -2,8 +2,7 @@
 
 ## Introduction to Anytore
 
-Anytore is a simple web application for recording your daily training. The frontend is in this repository, and the backend can be found at the following repository:
-[https://github.com/openkrafter/anytore-backend](https://github.com/openkrafter/anytore-backend)
+Anytore is a simple web application for recording your daily training. The frontend is in this repository, and the backend can be found at the following repository: [https://github.com/openkrafter/anytore-backend](https://github.com/openkrafter/anytore-backend)
 
 ## Usage
 
@@ -17,7 +16,7 @@ You can deploy it to a local environment using Docker or set it up on AWS.
 
    - Refer to the [backend application repository](https://github.com/openkrafter/anytore-backend).
 
-2. **Frontend Local Setup**
+2. **Frontend Application Local Setup**
 
    - Clone the repository.
 
@@ -39,7 +38,7 @@ You can deploy it to a local environment using Docker or set it up on AWS.
 
      ```sh
      cd anytore
-     platform/local/scripts/dynamodb-local-setup.sh
+     platform/local/local-setup.sh
      ```
 
 ## Testing
@@ -58,15 +57,15 @@ You can deploy it to a local environment using Docker or set it up on AWS.
 
 ## Cleanup
 
-To delete Anytore, run the following script:
+To delete Anytore (Frontend), run the following script:
 
 ```sh
-platform/local/scripts/dynamodb-local-teardown.sh
+platform/local/local-teardown.sh
 ```
 
 ## Tech Stack
 
-- Vue.js
-- MySQL
+- macOS / Linux
 - Docker
-- Amazon DynamoDB
+- Vue.js
+- Nginx
