@@ -1,8 +1,23 @@
+<p align="center" style="font-size: 5em; font-weight: 600; font-style: italic; color: #FFD700;">
+  ANYTORE
+</p>
+
 # Anytore (Frontend)
 
 ## Introduction to Anytore
 
 Anytore is a simple web application for recording your daily training. The frontend is in this repository, and the backend can be found at the following repository: [https://github.com/openkrafter/anytore-backend](https://github.com/openkrafter/anytore-backend)
+
+## Application Screenshots
+
+1. **Training Items Screen**
+   ![Training Items Screen](docs/images/update-training-item.png)
+
+2. **Record Your Effort Screen**
+   ![Record Your Effort Screen](docs/images/add-training-record.png)
+
+3. **View Your Records Screen**
+   ![View Your Records Screen](docs/images/display-records.png)
 
 ## Usage
 

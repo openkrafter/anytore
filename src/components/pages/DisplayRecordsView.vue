@@ -17,7 +17,7 @@ export default {
 
 <template>
   <div class="m-4">
-    <h1 class="text-4xl">これまでの頑張りとあなたのカラダ</h1>
+    <h1 class="text-4xl">これまでの頑張り</h1>
 
     <div class="mt-4 ml-4">
       <div>
