@@ -499,9 +499,12 @@ export default {
 
 <template>
   <h2 class="text-2xl">トレーニングの記録</h2>
-  <div class="grid grid-cols-10">
-    <div class="mt-4 ml-4 grid col-start-1 col-span-4">
-      <div v-for="(trainingRecordChartData, idx) in trainingRecordsChartData">
+  <div class="grid grid-cols-10 mt-4 ml-4">
+    <div class="col-start-1 col-span-10 flex flex-wrap space-x-4">
+      <div
+        v-for="(trainingRecordChartData, idx) in trainingRecordsChartData"
+        class="flex items-center space-x-2"
+      >
         <input
           type="checkbox"
           :id="'visibleTrainingRecord' + idx"
@@ -512,55 +515,69 @@ export default {
         </label>
       </div>
     </div>
-    <div class="mt-4 ml-4 grid col-start-7 col-span-2">
-      <label for="displayed-date">表示日時の選択</label>
-      <input
-        id="displayed-date"
-        type="date"
-        @change="changeDisplayCondition"
-        v-model="inputDate"
-      />
+    <div class="mt-4 col-start-1 col-span-10 flex space-x-4">
+      <div class="flex flex-col mr-4 mb-4">
+        <label for="displayed-date">表示日時の選択</label>
+        <input
+          id="displayed-date"
+          type="date"
+          @change="changeDisplayCondition"
+          v-model="inputDate"
+        />
+      </div>
 
-      <label for="current-aggregation-unit">表示単位の選択</label>
-      <select
-        name="current-aggregation-unit"
-        id="current-aggregation-unit"
-        @change="changeDisplayCondition"
-        v-model="currentAggregationUnit"
-        required
-      >
-        <option :value="AGGREGATION_UNIT.DAILY">
-          {{ AGGREGATION_UNIT.DAILY }}
-        </option>
-        <option :value="AGGREGATION_UNIT.WEEKLY">
-          {{ AGGREGATION_UNIT.WEEKLY }}
-        </option>
-        <option :value="AGGREGATION_UNIT.MONTHLY">
-          {{ AGGREGATION_UNIT.MONTHLY }}
-        </option>
-      </select>
+      <div class="flex flex-col">
+        <label for="current-aggregation-unit">表示単位の選択</label>
+        <select
+          name="current-aggregation-unit"
+          id="current-aggregation-unit"
+          @change="changeDisplayCondition"
+          v-model="currentAggregationUnit"
+          required
+        >
+          <option :value="AGGREGATION_UNIT.DAILY">
+            {{ AGGREGATION_UNIT.DAILY }}
+          </option>
+          <option :value="AGGREGATION_UNIT.WEEKLY">
+            {{ AGGREGATION_UNIT.WEEKLY }}
+          </option>
+          <option :value="AGGREGATION_UNIT.MONTHLY">
+            {{ AGGREGATION_UNIT.MONTHLY }}
+          </option>
+        </select>
+      </div>
     </div>
 
+    <!--
     <div
       v-for="trainingRecordChartData in trainingRecordsChartData"
       class="mt-4 grid col-start-2 col-span-8"
     >
-      <BarChart
-        v-if="
-          trainingRecordChartData.visible &&
-          trainingRecordChartData.chartType === CHART_TYPE.BAR
-        "
-        :data="trainingRecordChartData.data"
-        :title="trainingRecordChartData.title"
-      />
-      <LineChart
-        v-else-if="
-          trainingRecordChartData.visible &&
-          trainingRecordChartData.chartType === CHART_TYPE.LINE
-        "
-        :data="trainingRecordChartData.data"
-        :title="trainingRecordChartData.title"
-      />
+-->
+    <div class="mt-4 col-start-1 col-span-10">
+      <div class="grid gap-12 md:grid-cols-1 lg:grid-cols-2">
+        <div
+          v-for="trainingRecordChartData in trainingRecordsChartData"
+          key="idx"
+        >
+          <BarChart
+            v-if="
+              trainingRecordChartData.visible &&
+              trainingRecordChartData.chartType === CHART_TYPE.BAR
+            "
+            :data="trainingRecordChartData.data"
+            :title="trainingRecordChartData.title"
+          />
+          <LineChart
+            v-else-if="
+              trainingRecordChartData.visible &&
+              trainingRecordChartData.chartType === CHART_TYPE.LINE
+            "
+            :data="trainingRecordChartData.data"
+            :title="trainingRecordChartData.title"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
