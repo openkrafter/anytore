@@ -16,9 +16,14 @@ logger.info('start app')
 axios.defaults.baseURL = import.meta.env.VITE_ANYTORE_BACKEND_SERVER
 axios.defaults.timeout = 8000
 
+console.log(axios.defaults.baseURL)
+console.log(import.meta.env.VITE_ANYTORE_BACKEND_SERVER)
+
 if (process.env.NODE_ENV === 'development') {
   worker.start()
 }
+
+console.log(process.env.NODE_ENV)
 
 const app = createApp(App)
 app.use(router)
