@@ -1,5 +1,3 @@
-import { rest } from 'msw'
-
 const listUsers = (req, res, ctx) => {
   return res(
     ctx.status(200),
