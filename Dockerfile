@@ -9,6 +9,8 @@ RUN apt-get update \
 WORKDIR /app
 
 COPY package*.json ./
+# TODO: 現在は --production を付けていないので devDependencies package も入っている
+# そもそも devDependencies の精査が必要なので、一旦はこのまま現状維持とする
 RUN npm install
 
 COPY . .
