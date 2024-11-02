@@ -19,8 +19,7 @@
     "pino": "^8.16.0",
     "vue": "^3.5.10",
     "vue-chartjs": "^5.2.0",
-    "vue-router": "^4.2.4",
-    "micromatch": "^4.0.8"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
